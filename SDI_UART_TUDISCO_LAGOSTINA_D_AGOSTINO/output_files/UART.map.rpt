@@ -1,0 +1,1067 @@
+Analysis & Synthesis report for UART
+Tue Feb 02 22:47:08 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |UART|BusInterface:BI|currentState
+  9. State Machine - |UART|rx_unit:RX|CU_RX:CU|CURRENT_STATE
+ 10. State Machine - |UART|tx_dp_cu:TX|currentState
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: tx_dp_cu:TX|counter_2_tc:COUNTER2TC
+ 16. Parameter Settings for User Entity Instance: tx_dp_cu:TX|counter_2_tc:COUNTER2TC|contatoreX:COUNTER
+ 17. Parameter Settings for User Entity Instance: tx_dp_cu:TX|counter_2_tc:COUNTER2TC|terminal_count_analyzer:TC_ANALYZER_1
+ 18. Parameter Settings for User Entity Instance: tx_dp_cu:TX|counter_2_tc:COUNTER2TC|terminal_count_analyzer:TC_ANALYZER_2
+ 19. Parameter Settings for User Entity Instance: tx_dp_cu:TX|counter_with_tc:COUNTER1TC
+ 20. Parameter Settings for User Entity Instance: tx_dp_cu:TX|counter_with_tc:COUNTER1TC|contatoreX:COUNTER
+ 21. Parameter Settings for User Entity Instance: tx_dp_cu:TX|counter_with_tc:COUNTER1TC|terminal_count_analyzer:TC_ANALYZER
+ 22. Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:RX8_SAMPLES
+ 23. Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:REG_DATA_OUT
+ 24. Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_TIME_SAMPLES
+ 25. Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_TIME_SAMPLES|RX_contatore:COUNTER
+ 26. Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_TIME_SAMPLES|RX_terminal_count_analyzer:TC_ANALYZER
+ 27. Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_SYMBOLS
+ 28. Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_SYMBOLS|RX_contatore:COUNTER
+ 29. Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_SYMBOLS|RX_terminal_count_analyzer:TC_ANALYZER
+ 30. Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_2_tc:CNT_SAMPLES
+ 31. Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_2_tc:CNT_SAMPLES|RX_contatore:COUNTER
+ 32. Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_2_tc:CNT_SAMPLES|RX_terminal_count_analyzer:TC_ANALYZER_1
+ 33. Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_2_tc:CNT_SAMPLES|RX_terminal_count_analyzer:TC_ANALYZER_2
+ 34. Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_with_tc:CNT_TIME_NOP
+ 35. Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_with_tc:CNT_TIME_NOP|RX_contatore:COUNTER
+ 36. Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_with_tc:CNT_TIME_NOP|RX_terminal_count_analyzer:TC_ANALYZER
+ 37. Parameter Settings for User Entity Instance: BusInterface:BI|gen_mux_2_1:MUX
+ 38. Parameter Settings for User Entity Instance: BusInterface:BI|n_bit_register:BUFFER_CTRL
+ 39. Parameter Settings for User Entity Instance: BusInterface:BI|n_bit_register:CTRL_REG_2
+ 40. Port Connectivity Checks: "BusInterface:BI|Dec3to8:DEC"
+ 41. Port Connectivity Checks: "BusInterface:BI|FF:CLR_ATN_FF"
+ 42. Port Connectivity Checks: "BusInterface:BI|n_bit_register:BUFFER_CTRL"
+ 43. Port Connectivity Checks: "BusInterface:BI|changeDetector:RX_DET|FF:REG"
+ 44. Port Connectivity Checks: "BusInterface:BI|gen_mux_2_1:MUX"
+ 45. Port Connectivity Checks: "rx_unit:RX|rx_core:UUT|RX_mux2to1:MUX_SEL_EXPECTED_VAL"
+ 46. Post-Synthesis Netlist Statistics for Top Partition
+ 47. Elapsed Time Per Partition
+ 48. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Feb 02 22:47:08 2021       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; UART                                        ;
+; Top-level Entity Name              ; UART                                        ;
+; Family                             ; Cyclone 10 LP                               ;
+; Total logic elements               ; 164                                         ;
+;     Total combinational functions  ; 161                                         ;
+;     Dedicated logic registers      ; 98                                          ;
+; Total registers                    ; 98                                          ;
+; Total pins                         ; 27                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10CL025YE144C8G    ;                    ;
+; Top-level entity name                                            ; UART               ; UART               ;
+; Family name                                                      ; Cyclone 10 LP      ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.1%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                          ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
+; mux_2_1.vhd                      ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/mux_2_1.vhd                    ;         ;
+; gen_mux_2_1.vhd                  ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/gen_mux_2_1.vhd                ;         ;
+; UART.vhd                         ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/UART.vhd                       ;         ;
+; tx_dp_cu.vhd                     ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tx_dp_cu.vhd                   ;         ;
+; terminal_count_analyzer.vhd      ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/terminal_count_analyzer.vhd    ;         ;
+; SR_FF.vhd                        ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/SR_FF.vhd                      ;         ;
+; shift_register_piso_8bit.vhd     ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/shift_register_piso_8bit.vhd   ;         ;
+; rx_unit.vhd                      ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_unit.vhd                    ;         ;
+; RX_terminal_count_analyzer.vhd   ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_terminal_count_analyzer.vhd ;         ;
+; RX_SHIFT_REGISTER.vhd            ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_SHIFT_REGISTER.vhd          ;         ;
+; RX_recognize_value.vhd           ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_recognize_value.vhd         ;         ;
+; RX_recognize_start.vhd           ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_recognize_start.vhd         ;         ;
+; RX_mux2to1.vhd                   ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_mux2to1.vhd                 ;         ;
+; RX_flip_flop.vhd                 ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_flip_flop.vhd               ;         ;
+; RX_counter_with_tc.vhd           ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_counter_with_tc.vhd         ;         ;
+; RX_counter_2_tc.vhd              ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_counter_2_tc.vhd            ;         ;
+; rx_core.vhd                      ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_core.vhd                    ;         ;
+; RX_contatore.vhd                 ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_contatore.vhd               ;         ;
+; n_bit_register.vhd               ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/n_bit_register.vhd             ;         ;
+; FF.vhd                           ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/FF.vhd                         ;         ;
+; Dec3to8.vhd                      ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/Dec3to8.vhd                    ;         ;
+; CU_RX.vhd                        ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/CU_RX.vhd                      ;         ;
+; counter_with_tc.vhd              ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/counter_with_tc.vhd            ;         ;
+; counter_2_tc.vhd                 ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/counter_2_tc.vhd               ;         ;
+; contatoreX.vhd                   ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/contatoreX.vhd                 ;         ;
+; changeDetector.vhd               ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/changeDetector.vhd             ;         ;
+; BusInterface.vhd                 ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/BusInterface.vhd               ;         ;
+; blocco_txd.vhd                   ; yes             ; User VHDL File  ; C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/blocco_txd.vhd                 ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 164         ;
+;                                             ;             ;
+; Total combinational functions               ; 161         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 88          ;
+;     -- 3 input functions                    ; 28          ;
+;     -- <=2 input functions                  ; 45          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 150         ;
+;     -- arithmetic mode                      ; 11          ;
+;                                             ;             ;
+; Total registers                             ; 98          ;
+;     -- Dedicated logic registers            ; 98          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 27          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 98          ;
+; Total fan-out                               ; 828         ;
+; Average fan-out                             ; 2.65        ;
++---------------------------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                            ;
++-----------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+----------------------------+--------------+
+; Compilation Hierarchy Node                                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                         ; Entity Name                ; Library Name ;
++-----------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+----------------------------+--------------+
+; |UART                                                     ; 161 (0)             ; 98 (0)                    ; 0           ; 0            ; 0       ; 0         ; 27   ; 0            ; |UART                                                                                                       ; UART                       ; work         ;
+;    |BusInterface:BI|                                      ; 19 (6)              ; 8 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|BusInterface:BI                                                                                       ; BusInterface               ; work         ;
+;       |gen_mux_2_1:MUX|                                   ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|BusInterface:BI|gen_mux_2_1:MUX                                                                       ; gen_mux_2_1                ; work         ;
+;          |mux_2_1:\a:0:muxes|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|BusInterface:BI|gen_mux_2_1:MUX|mux_2_1:\a:0:muxes                                                    ; mux_2_1                    ; work         ;
+;          |mux_2_1:\a:1:muxes|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|BusInterface:BI|gen_mux_2_1:MUX|mux_2_1:\a:1:muxes                                                    ; mux_2_1                    ; work         ;
+;          |mux_2_1:\a:2:muxes|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|BusInterface:BI|gen_mux_2_1:MUX|mux_2_1:\a:2:muxes                                                    ; mux_2_1                    ; work         ;
+;          |mux_2_1:\a:3:muxes|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|BusInterface:BI|gen_mux_2_1:MUX|mux_2_1:\a:3:muxes                                                    ; mux_2_1                    ; work         ;
+;          |mux_2_1:\a:4:muxes|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|BusInterface:BI|gen_mux_2_1:MUX|mux_2_1:\a:4:muxes                                                    ; mux_2_1                    ; work         ;
+;          |mux_2_1:\a:5:muxes|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|BusInterface:BI|gen_mux_2_1:MUX|mux_2_1:\a:5:muxes                                                    ; mux_2_1                    ; work         ;
+;          |mux_2_1:\a:6:muxes|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|BusInterface:BI|gen_mux_2_1:MUX|mux_2_1:\a:6:muxes                                                    ; mux_2_1                    ; work         ;
+;          |mux_2_1:\a:7:muxes|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|BusInterface:BI|gen_mux_2_1:MUX|mux_2_1:\a:7:muxes                                                    ; mux_2_1                    ; work         ;
+;       |n_bit_register:BUFFER_CTRL|                        ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|BusInterface:BI|n_bit_register:BUFFER_CTRL                                                            ; n_bit_register             ; work         ;
+;       |n_bit_register:CTRL_REG_2|                         ; 3 (3)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|BusInterface:BI|n_bit_register:CTRL_REG_2                                                             ; n_bit_register             ; work         ;
+;    |rx_unit:RX|                                           ; 87 (0)              ; 56 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX                                                                                            ; rx_unit                    ; work         ;
+;       |CU_RX:CU|                                          ; 30 (30)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|CU_RX:CU                                                                                   ; CU_RX                      ; work         ;
+;       |rx_core:UUT|                                       ; 57 (0)              ; 36 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT                                                                                ; rx_core                    ; work         ;
+;          |RX_SHIFT_REGISTER:REG_DATA_OUT|                 ; 9 (0)               ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:REG_DATA_OUT                                                 ; RX_SHIFT_REGISTER          ; work         ;
+;             |RX_flip_flop:\SHIFT_REG_GEN:0:FLIP_FLOP_GEN| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:REG_DATA_OUT|RX_flip_flop:\SHIFT_REG_GEN:0:FLIP_FLOP_GEN     ; RX_flip_flop               ; work         ;
+;             |RX_flip_flop:\SHIFT_REG_GEN:1:FLIP_FLOP_GEN| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:REG_DATA_OUT|RX_flip_flop:\SHIFT_REG_GEN:1:FLIP_FLOP_GEN     ; RX_flip_flop               ; work         ;
+;             |RX_flip_flop:\SHIFT_REG_GEN:2:FLIP_FLOP_GEN| ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:REG_DATA_OUT|RX_flip_flop:\SHIFT_REG_GEN:2:FLIP_FLOP_GEN     ; RX_flip_flop               ; work         ;
+;             |RX_flip_flop:\SHIFT_REG_GEN:3:FLIP_FLOP_GEN| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:REG_DATA_OUT|RX_flip_flop:\SHIFT_REG_GEN:3:FLIP_FLOP_GEN     ; RX_flip_flop               ; work         ;
+;             |RX_flip_flop:\SHIFT_REG_GEN:4:FLIP_FLOP_GEN| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:REG_DATA_OUT|RX_flip_flop:\SHIFT_REG_GEN:4:FLIP_FLOP_GEN     ; RX_flip_flop               ; work         ;
+;             |RX_flip_flop:\SHIFT_REG_GEN:5:FLIP_FLOP_GEN| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:REG_DATA_OUT|RX_flip_flop:\SHIFT_REG_GEN:5:FLIP_FLOP_GEN     ; RX_flip_flop               ; work         ;
+;             |RX_flip_flop:\SHIFT_REG_GEN:6:FLIP_FLOP_GEN| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:REG_DATA_OUT|RX_flip_flop:\SHIFT_REG_GEN:6:FLIP_FLOP_GEN     ; RX_flip_flop               ; work         ;
+;             |RX_flip_flop:\SHIFT_REG_GEN:7:FLIP_FLOP_GEN| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:REG_DATA_OUT|RX_flip_flop:\SHIFT_REG_GEN:7:FLIP_FLOP_GEN     ; RX_flip_flop               ; work         ;
+;          |RX_SHIFT_REGISTER:RX8_SAMPLES|                  ; 10 (0)              ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:RX8_SAMPLES                                                  ; RX_SHIFT_REGISTER          ; work         ;
+;             |RX_flip_flop:\SHIFT_REG_GEN:0:FLIP_FLOP_GEN| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:RX8_SAMPLES|RX_flip_flop:\SHIFT_REG_GEN:0:FLIP_FLOP_GEN      ; RX_flip_flop               ; work         ;
+;             |RX_flip_flop:\SHIFT_REG_GEN:1:FLIP_FLOP_GEN| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:RX8_SAMPLES|RX_flip_flop:\SHIFT_REG_GEN:1:FLIP_FLOP_GEN      ; RX_flip_flop               ; work         ;
+;             |RX_flip_flop:\SHIFT_REG_GEN:2:FLIP_FLOP_GEN| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:RX8_SAMPLES|RX_flip_flop:\SHIFT_REG_GEN:2:FLIP_FLOP_GEN      ; RX_flip_flop               ; work         ;
+;             |RX_flip_flop:\SHIFT_REG_GEN:3:FLIP_FLOP_GEN| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:RX8_SAMPLES|RX_flip_flop:\SHIFT_REG_GEN:3:FLIP_FLOP_GEN      ; RX_flip_flop               ; work         ;
+;             |RX_flip_flop:\SHIFT_REG_GEN:4:FLIP_FLOP_GEN| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:RX8_SAMPLES|RX_flip_flop:\SHIFT_REG_GEN:4:FLIP_FLOP_GEN      ; RX_flip_flop               ; work         ;
+;             |RX_flip_flop:\SHIFT_REG_GEN:5:FLIP_FLOP_GEN| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:RX8_SAMPLES|RX_flip_flop:\SHIFT_REG_GEN:5:FLIP_FLOP_GEN      ; RX_flip_flop               ; work         ;
+;             |RX_flip_flop:\SHIFT_REG_GEN:6:FLIP_FLOP_GEN| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:RX8_SAMPLES|RX_flip_flop:\SHIFT_REG_GEN:6:FLIP_FLOP_GEN      ; RX_flip_flop               ; work         ;
+;             |RX_flip_flop:\SHIFT_REG_GEN:7:FLIP_FLOP_GEN| ; 3 (3)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:RX8_SAMPLES|RX_flip_flop:\SHIFT_REG_GEN:7:FLIP_FLOP_GEN      ; RX_flip_flop               ; work         ;
+;          |RX_counter_2_tc:CNT_SAMPLES|                    ; 9 (0)               ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_counter_2_tc:CNT_SAMPLES                                                    ; RX_counter_2_tc            ; work         ;
+;             |RX_contatore:COUNTER|                        ; 7 (7)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_counter_2_tc:CNT_SAMPLES|RX_contatore:COUNTER                               ; RX_contatore               ; work         ;
+;             |RX_terminal_count_analyzer:TC_ANALYZER_1|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_counter_2_tc:CNT_SAMPLES|RX_terminal_count_analyzer:TC_ANALYZER_1           ; RX_terminal_count_analyzer ; work         ;
+;             |RX_terminal_count_analyzer:TC_ANALYZER_2|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_counter_2_tc:CNT_SAMPLES|RX_terminal_count_analyzer:TC_ANALYZER_2           ; RX_terminal_count_analyzer ; work         ;
+;          |RX_counter_with_tc:CNT_TIME_NOP|                ; 3 (0)               ; 1 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_counter_with_tc:CNT_TIME_NOP                                                ; RX_counter_with_tc         ; work         ;
+;             |RX_contatore:COUNTER|                        ; 3 (3)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_counter_with_tc:CNT_TIME_NOP|RX_contatore:COUNTER                           ; RX_contatore               ; work         ;
+;          |RX_counter_with_tc:COUNTER_SYMBOLS|             ; 6 (0)               ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_SYMBOLS                                             ; RX_counter_with_tc         ; work         ;
+;             |RX_contatore:COUNTER|                        ; 6 (6)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_SYMBOLS|RX_contatore:COUNTER                        ; RX_contatore               ; work         ;
+;          |RX_counter_with_tc:COUNTER_TIME_SAMPLES|        ; 10 (0)              ; 5 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_TIME_SAMPLES                                        ; RX_counter_with_tc         ; work         ;
+;             |RX_contatore:COUNTER|                        ; 8 (8)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_TIME_SAMPLES|RX_contatore:COUNTER                   ; RX_contatore               ; work         ;
+;             |RX_terminal_count_analyzer:TC_ANALYZER|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_TIME_SAMPLES|RX_terminal_count_analyzer:TC_ANALYZER ; RX_terminal_count_analyzer ; work         ;
+;          |RX_recognize_start:RICONOSCITORE_START|         ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_recognize_start:RICONOSCITORE_START                                         ; RX_recognize_start         ; work         ;
+;          |RX_recognize_value:DECISORE_UNIT|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|RX_recognize_value:DECISORE_UNIT                                               ; RX_recognize_value         ; work         ;
+;          |SR_FF:SR_BUSY|                                  ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|SR_FF:SR_BUSY                                                                  ; SR_FF                      ; work         ;
+;          |SR_FF:SR_DONE|                                  ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|SR_FF:SR_DONE                                                                  ; SR_FF                      ; work         ;
+;          |SR_FF:SR_ERROR|                                 ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|rx_unit:RX|rx_core:UUT|SR_FF:SR_ERROR                                                                 ; SR_FF                      ; work         ;
+;    |tx_dp_cu:TX|                                          ; 55 (19)             ; 34 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|tx_dp_cu:TX                                                                                           ; tx_dp_cu                   ; work         ;
+;       |SR_FF:FF|                                          ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|tx_dp_cu:TX|SR_FF:FF                                                                                  ; SR_FF                      ; work         ;
+;       |blocco_txd:blocco_tx|                              ; 14 (3)              ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|tx_dp_cu:TX|blocco_txd:blocco_tx                                                                      ; blocco_txd                 ; work         ;
+;          |shift_register_piso_8bit:BLOCCO_SHIFT|          ; 11 (11)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|tx_dp_cu:TX|blocco_txd:blocco_tx|shift_register_piso_8bit:BLOCCO_SHIFT                                ; shift_register_piso_8bit   ; work         ;
+;       |counter_2_tc:COUNTER2TC|                           ; 13 (0)              ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|tx_dp_cu:TX|counter_2_tc:COUNTER2TC                                                                   ; counter_2_tc               ; work         ;
+;          |contatoreX:COUNTER|                             ; 10 (10)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|tx_dp_cu:TX|counter_2_tc:COUNTER2TC|contatoreX:COUNTER                                                ; contatoreX                 ; work         ;
+;          |terminal_count_analyzer:TC_ANALYZER_1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|tx_dp_cu:TX|counter_2_tc:COUNTER2TC|terminal_count_analyzer:TC_ANALYZER_1                             ; terminal_count_analyzer    ; work         ;
+;          |terminal_count_analyzer:TC_ANALYZER_2|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|tx_dp_cu:TX|counter_2_tc:COUNTER2TC|terminal_count_analyzer:TC_ANALYZER_2                             ; terminal_count_analyzer    ; work         ;
+;       |counter_with_tc:COUNTER1TC|                        ; 7 (0)               ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|tx_dp_cu:TX|counter_with_tc:COUNTER1TC                                                                ; counter_with_tc            ; work         ;
+;          |contatoreX:COUNTER|                             ; 6 (6)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|tx_dp_cu:TX|counter_with_tc:COUNTER1TC|contatoreX:COUNTER                                             ; contatoreX                 ; work         ;
+;          |terminal_count_analyzer:TC_ANALYZER|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART|tx_dp_cu:TX|counter_with_tc:COUNTER1TC|terminal_count_analyzer:TC_ANALYZER                            ; terminal_count_analyzer    ; work         ;
++-----------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+----------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |UART|BusInterface:BI|currentState                                                                                                                                                                                                ;
++-------------------------+-------------------+------------------------+------------------------+------------------------+------------------------+-----------------------+---------------------+-------------------------+-------------------------+
+; Name                    ; currentState.idle ; currentState.RemoveATN ; currentState.SendATNTX ; currentState.SendATNRX ; currentState.WriteCTRL ; currentState.NOPState ; currentState.ReadRX ; currentState.ReadStatus ; currentState.ResetState ;
++-------------------------+-------------------+------------------------+------------------------+------------------------+------------------------+-----------------------+---------------------+-------------------------+-------------------------+
+; currentState.ResetState ; 0                 ; 0                      ; 0                      ; 0                      ; 0                      ; 0                     ; 0                   ; 0                       ; 0                       ;
+; currentState.ReadStatus ; 0                 ; 0                      ; 0                      ; 0                      ; 0                      ; 0                     ; 0                   ; 1                       ; 1                       ;
+; currentState.ReadRX     ; 0                 ; 0                      ; 0                      ; 0                      ; 0                      ; 0                     ; 1                   ; 0                       ; 1                       ;
+; currentState.NOPState   ; 0                 ; 0                      ; 0                      ; 0                      ; 0                      ; 1                     ; 0                   ; 0                       ; 1                       ;
+; currentState.WriteCTRL  ; 0                 ; 0                      ; 0                      ; 0                      ; 1                      ; 0                     ; 0                   ; 0                       ; 1                       ;
+; currentState.SendATNRX  ; 0                 ; 0                      ; 0                      ; 1                      ; 0                      ; 0                     ; 0                   ; 0                       ; 1                       ;
+; currentState.SendATNTX  ; 0                 ; 0                      ; 1                      ; 0                      ; 0                      ; 0                     ; 0                   ; 0                       ; 1                       ;
+; currentState.RemoveATN  ; 0                 ; 1                      ; 0                      ; 0                      ; 0                      ; 0                     ; 0                   ; 0                       ; 1                       ;
+; currentState.idle       ; 1                 ; 0                      ; 0                      ; 0                      ; 0                      ; 0                     ; 0                   ; 0                       ; 1                       ;
++-------------------------+-------------------+------------------------+------------------------+------------------------+------------------------+-----------------------+---------------------+-------------------------+-------------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |UART|rx_unit:RX|CU_RX:CU|CURRENT_STATE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------------------------------+------------------------------+-----------------------------------+-----------------------------+--------------------------------+------------------------------+--------------------------+----------------------------------+---------------------------+-----------------------------+----------------------------------+------------------------------+--------------------------------------+--------------------------------+---------------------------------------+---------------------------------------+-----------------------------------+-----------------------------------+----------------------+----------------------+---------------------------+
+; Name                                  ; CURRENT_STATE.ERROR_STOP_BIT ; CURRENT_STATE.EVALUATE_ERROR_STOP ; CURRENT_STATE.STOP_BIT_WAIT ; CURRENT_STATE.STOP_BIT_SAMPLES ; CURRENT_STATE.NOP_SYMBOL_END ; CURRENT_STATE.NOP_SYMBOL ; CURRENT_STATE.EVALUATION_SYMBOLS ; CURRENT_STATE.SYMBOL_WAIT ; CURRENT_STATE.SYMBOL_SAMPLE ; CURRENT_STATE.NOP_START_SYMB_END ; CURRENT_STATE.NOP_START_SYMB ; CURRENT_STATE.MANAGE_ERROR_START_BIT ; CURRENT_STATE.LOAD_ERROR_START ; CURRENT_STATE.ANALISI_SAMPLES_START_2 ; CURRENT_STATE.ANALISI_SAMPLES_START_1 ; CURRENT_STATE.STATE_AFTER_START_2 ; CURRENT_STATE.STATE_AFTER_START_1 ; CURRENT_STATE.IDLE_2 ; CURRENT_STATE.IDLE_1 ; CURRENT_STATE.RESET_STATE ;
++---------------------------------------+------------------------------+-----------------------------------+-----------------------------+--------------------------------+------------------------------+--------------------------+----------------------------------+---------------------------+-----------------------------+----------------------------------+------------------------------+--------------------------------------+--------------------------------+---------------------------------------+---------------------------------------+-----------------------------------+-----------------------------------+----------------------+----------------------+---------------------------+
+; CURRENT_STATE.RESET_STATE             ; 0                            ; 0                                 ; 0                           ; 0                              ; 0                            ; 0                        ; 0                                ; 0                         ; 0                           ; 0                                ; 0                            ; 0                                    ; 0                              ; 0                                     ; 0                                     ; 0                                 ; 0                                 ; 0                    ; 0                    ; 0                         ;
+; CURRENT_STATE.IDLE_1                  ; 0                            ; 0                                 ; 0                           ; 0                              ; 0                            ; 0                        ; 0                                ; 0                         ; 0                           ; 0                                ; 0                            ; 0                                    ; 0                              ; 0                                     ; 0                                     ; 0                                 ; 0                                 ; 0                    ; 1                    ; 1                         ;
+; CURRENT_STATE.IDLE_2                  ; 0                            ; 0                                 ; 0                           ; 0                              ; 0                            ; 0                        ; 0                                ; 0                         ; 0                           ; 0                                ; 0                            ; 0                                    ; 0                              ; 0                                     ; 0                                     ; 0                                 ; 0                                 ; 1                    ; 0                    ; 1                         ;
+; CURRENT_STATE.STATE_AFTER_START_1     ; 0                            ; 0                                 ; 0                           ; 0                              ; 0                            ; 0                        ; 0                                ; 0                         ; 0                           ; 0                                ; 0                            ; 0                                    ; 0                              ; 0                                     ; 0                                     ; 0                                 ; 1                                 ; 0                    ; 0                    ; 1                         ;
+; CURRENT_STATE.STATE_AFTER_START_2     ; 0                            ; 0                                 ; 0                           ; 0                              ; 0                            ; 0                        ; 0                                ; 0                         ; 0                           ; 0                                ; 0                            ; 0                                    ; 0                              ; 0                                     ; 0                                     ; 1                                 ; 0                                 ; 0                    ; 0                    ; 1                         ;
+; CURRENT_STATE.ANALISI_SAMPLES_START_1 ; 0                            ; 0                                 ; 0                           ; 0                              ; 0                            ; 0                        ; 0                                ; 0                         ; 0                           ; 0                                ; 0                            ; 0                                    ; 0                              ; 0                                     ; 1                                     ; 0                                 ; 0                                 ; 0                    ; 0                    ; 1                         ;
+; CURRENT_STATE.ANALISI_SAMPLES_START_2 ; 0                            ; 0                                 ; 0                           ; 0                              ; 0                            ; 0                        ; 0                                ; 0                         ; 0                           ; 0                                ; 0                            ; 0                                    ; 0                              ; 1                                     ; 0                                     ; 0                                 ; 0                                 ; 0                    ; 0                    ; 1                         ;
+; CURRENT_STATE.LOAD_ERROR_START        ; 0                            ; 0                                 ; 0                           ; 0                              ; 0                            ; 0                        ; 0                                ; 0                         ; 0                           ; 0                                ; 0                            ; 0                                    ; 1                              ; 0                                     ; 0                                     ; 0                                 ; 0                                 ; 0                    ; 0                    ; 1                         ;
+; CURRENT_STATE.MANAGE_ERROR_START_BIT  ; 0                            ; 0                                 ; 0                           ; 0                              ; 0                            ; 0                        ; 0                                ; 0                         ; 0                           ; 0                                ; 0                            ; 1                                    ; 0                              ; 0                                     ; 0                                     ; 0                                 ; 0                                 ; 0                    ; 0                    ; 1                         ;
+; CURRENT_STATE.NOP_START_SYMB          ; 0                            ; 0                                 ; 0                           ; 0                              ; 0                            ; 0                        ; 0                                ; 0                         ; 0                           ; 0                                ; 1                            ; 0                                    ; 0                              ; 0                                     ; 0                                     ; 0                                 ; 0                                 ; 0                    ; 0                    ; 1                         ;
+; CURRENT_STATE.NOP_START_SYMB_END      ; 0                            ; 0                                 ; 0                           ; 0                              ; 0                            ; 0                        ; 0                                ; 0                         ; 0                           ; 1                                ; 0                            ; 0                                    ; 0                              ; 0                                     ; 0                                     ; 0                                 ; 0                                 ; 0                    ; 0                    ; 1                         ;
+; CURRENT_STATE.SYMBOL_SAMPLE           ; 0                            ; 0                                 ; 0                           ; 0                              ; 0                            ; 0                        ; 0                                ; 0                         ; 1                           ; 0                                ; 0                            ; 0                                    ; 0                              ; 0                                     ; 0                                     ; 0                                 ; 0                                 ; 0                    ; 0                    ; 1                         ;
+; CURRENT_STATE.SYMBOL_WAIT             ; 0                            ; 0                                 ; 0                           ; 0                              ; 0                            ; 0                        ; 0                                ; 1                         ; 0                           ; 0                                ; 0                            ; 0                                    ; 0                              ; 0                                     ; 0                                     ; 0                                 ; 0                                 ; 0                    ; 0                    ; 1                         ;
+; CURRENT_STATE.EVALUATION_SYMBOLS      ; 0                            ; 0                                 ; 0                           ; 0                              ; 0                            ; 0                        ; 1                                ; 0                         ; 0                           ; 0                                ; 0                            ; 0                                    ; 0                              ; 0                                     ; 0                                     ; 0                                 ; 0                                 ; 0                    ; 0                    ; 1                         ;
+; CURRENT_STATE.NOP_SYMBOL              ; 0                            ; 0                                 ; 0                           ; 0                              ; 0                            ; 1                        ; 0                                ; 0                         ; 0                           ; 0                                ; 0                            ; 0                                    ; 0                              ; 0                                     ; 0                                     ; 0                                 ; 0                                 ; 0                    ; 0                    ; 1                         ;
+; CURRENT_STATE.NOP_SYMBOL_END          ; 0                            ; 0                                 ; 0                           ; 0                              ; 1                            ; 0                        ; 0                                ; 0                         ; 0                           ; 0                                ; 0                            ; 0                                    ; 0                              ; 0                                     ; 0                                     ; 0                                 ; 0                                 ; 0                    ; 0                    ; 1                         ;
+; CURRENT_STATE.STOP_BIT_SAMPLES        ; 0                            ; 0                                 ; 0                           ; 1                              ; 0                            ; 0                        ; 0                                ; 0                         ; 0                           ; 0                                ; 0                            ; 0                                    ; 0                              ; 0                                     ; 0                                     ; 0                                 ; 0                                 ; 0                    ; 0                    ; 1                         ;
+; CURRENT_STATE.STOP_BIT_WAIT           ; 0                            ; 0                                 ; 1                           ; 0                              ; 0                            ; 0                        ; 0                                ; 0                         ; 0                           ; 0                                ; 0                            ; 0                                    ; 0                              ; 0                                     ; 0                                     ; 0                                 ; 0                                 ; 0                    ; 0                    ; 1                         ;
+; CURRENT_STATE.EVALUATE_ERROR_STOP     ; 0                            ; 1                                 ; 0                           ; 0                              ; 0                            ; 0                        ; 0                                ; 0                         ; 0                           ; 0                                ; 0                            ; 0                                    ; 0                              ; 0                                     ; 0                                     ; 0                                 ; 0                                 ; 0                    ; 0                    ; 1                         ;
+; CURRENT_STATE.ERROR_STOP_BIT          ; 1                            ; 0                                 ; 0                           ; 0                              ; 0                            ; 0                        ; 0                                ; 0                         ; 0                           ; 0                                ; 0                            ; 0                                    ; 0                              ; 0                                     ; 0                                     ; 0                                 ; 0                                 ; 0                    ; 0                    ; 1                         ;
++---------------------------------------+------------------------------+-----------------------------------+-----------------------------+--------------------------------+------------------------------+--------------------------+----------------------------------+---------------------------+-----------------------------+----------------------------------+------------------------------+--------------------------------------+--------------------------------+---------------------------------------+---------------------------------------+-----------------------------------+-----------------------------------+----------------------+----------------------+---------------------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |UART|tx_dp_cu:TX|currentState                                                                                                                                                                                                                                                                                 ;
++----------------------------+----------------------+-------------------------+----------------------+--------------------+----------------------------+--------------------------+--------------------+---------------------------+----------------------+-----------------------+----------------------+-----------------------+
+; Name                       ; currentState.TX_DONE ; currentState.TX_SR_LOAD ; currentState.TX_STOP ; currentState.TX_D7 ; currentState.TX_SHIFT_DOWN ; currentState.TX_SHIFT_UP ; currentState.TX_D0 ; currentState.TX_START_BIT ; currentState.TX_ZERO ; currentState.TX_START ; currentState.TX_IDLE ; currentState.TX_RESET ;
++----------------------------+----------------------+-------------------------+----------------------+--------------------+----------------------------+--------------------------+--------------------+---------------------------+----------------------+-----------------------+----------------------+-----------------------+
+; currentState.TX_RESET      ; 0                    ; 0                       ; 0                    ; 0                  ; 0                          ; 0                        ; 0                  ; 0                         ; 0                    ; 0                     ; 0                    ; 0                     ;
+; currentState.TX_IDLE       ; 0                    ; 0                       ; 0                    ; 0                  ; 0                          ; 0                        ; 0                  ; 0                         ; 0                    ; 0                     ; 1                    ; 1                     ;
+; currentState.TX_START      ; 0                    ; 0                       ; 0                    ; 0                  ; 0                          ; 0                        ; 0                  ; 0                         ; 0                    ; 1                     ; 0                    ; 1                     ;
+; currentState.TX_ZERO       ; 0                    ; 0                       ; 0                    ; 0                  ; 0                          ; 0                        ; 0                  ; 0                         ; 1                    ; 0                     ; 0                    ; 1                     ;
+; currentState.TX_START_BIT  ; 0                    ; 0                       ; 0                    ; 0                  ; 0                          ; 0                        ; 0                  ; 1                         ; 0                    ; 0                     ; 0                    ; 1                     ;
+; currentState.TX_D0         ; 0                    ; 0                       ; 0                    ; 0                  ; 0                          ; 0                        ; 1                  ; 0                         ; 0                    ; 0                     ; 0                    ; 1                     ;
+; currentState.TX_SHIFT_UP   ; 0                    ; 0                       ; 0                    ; 0                  ; 0                          ; 1                        ; 0                  ; 0                         ; 0                    ; 0                     ; 0                    ; 1                     ;
+; currentState.TX_SHIFT_DOWN ; 0                    ; 0                       ; 0                    ; 0                  ; 1                          ; 0                        ; 0                  ; 0                         ; 0                    ; 0                     ; 0                    ; 1                     ;
+; currentState.TX_D7         ; 0                    ; 0                       ; 0                    ; 1                  ; 0                          ; 0                        ; 0                  ; 0                         ; 0                    ; 0                     ; 0                    ; 1                     ;
+; currentState.TX_STOP       ; 0                    ; 0                       ; 1                    ; 0                  ; 0                          ; 0                        ; 0                  ; 0                         ; 0                    ; 0                     ; 0                    ; 1                     ;
+; currentState.TX_SR_LOAD    ; 0                    ; 1                       ; 0                    ; 0                  ; 0                          ; 0                        ; 0                  ; 0                         ; 0                    ; 0                     ; 0                    ; 1                     ;
+; currentState.TX_DONE       ; 1                    ; 0                       ; 0                    ; 0                  ; 0                          ; 0                        ; 0                  ; 0                         ; 0                    ; 0                     ; 0                    ; 1                     ;
++----------------------------+----------------------+-------------------------+----------------------+--------------------+----------------------------+--------------------------+--------------------+---------------------------+----------------------+-----------------------+----------------------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                             ;
++-------------------------------------------------------+----------------------------------------+
+; Register name                                         ; Reason for Removal                     ;
++-------------------------------------------------------+----------------------------------------+
+; BusInterface:BI|SR_FF:ATN_REG|Qprev                   ; Stuck at GND due to stuck port data_in ;
+; BusInterface:BI|SR_FF:ATN_REG|Q                       ; Stuck at GND due to stuck port data_in ;
+; BusInterface:BI|currentState.ReadRX                   ; Lost fanout                            ;
+; BusInterface:BI|currentState.idle                     ; Lost fanout                            ;
+; BusInterface:BI|currentState.RemoveATN                ; Lost fanout                            ;
+; BusInterface:BI|currentState.SendATNRX                ; Lost fanout                            ;
+; BusInterface:BI|currentState.SendATNTX                ; Lost fanout                            ;
+; BusInterface:BI|changeDetector:TX_DET|FF:REG|data_out ; Lost fanout                            ;
+; BusInterface:BI|changeDetector:RX_DET|FF:REG|data_out ; Lost fanout                            ;
+; Total Number of Removed Registers = 9                 ;                                        ;
++-------------------------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                ;
++----------------------------------------+---------------------------+-------------------------------------------------------+
+; Register name                          ; Reason for Removal        ; Registers Removed due to This Register                ;
++----------------------------------------+---------------------------+-------------------------------------------------------+
+; BusInterface:BI|SR_FF:ATN_REG|Qprev    ; Stuck at GND              ; BusInterface:BI|SR_FF:ATN_REG|Q                       ;
+;                                        ; due to stuck port data_in ;                                                       ;
+; BusInterface:BI|currentState.idle      ; Lost Fanouts              ; BusInterface:BI|changeDetector:TX_DET|FF:REG|data_out ;
+; BusInterface:BI|currentState.SendATNRX ; Lost Fanouts              ; BusInterface:BI|changeDetector:RX_DET|FF:REG|data_out ;
++----------------------------------------+---------------------------+-------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 98    ;
+; Number of registers using Synchronous Clear  ; 23    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 49    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |UART|BusInterface:BI|n_bit_register:CTRL_REG_2|data_out[0]                                                      ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |UART|rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:REG_DATA_OUT|RX_flip_flop:\SHIFT_REG_GEN:2:FLIP_FLOP_GEN|DATA_OUT ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |UART|rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_SYMBOLS|RX_contatore:COUNTER|DOUT[3]                     ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |UART|rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_TIME_SAMPLES|RX_contatore:COUNTER|DOUT[4]                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |UART|rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:RX8_SAMPLES|RX_flip_flop:\SHIFT_REG_GEN:7:FLIP_FLOP_GEN|DATA_OUT  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |UART|rx_unit:RX|rx_core:UUT|RX_counter_2_tc:CNT_SAMPLES|RX_contatore:COUNTER|DOUT[1]                            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |UART|tx_dp_cu:TX|counter_2_tc:COUNTER2TC|contatoreX:COUNTER|DOUT[0]                                             ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |UART|tx_dp_cu:TX|counter_with_tc:COUNTER1TC|contatoreX:COUNTER|DOUT[0]                                          ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |UART|tx_dp_cu:TX|blocco_txd:blocco_tx|shift_register_piso_8bit:BLOCCO_SHIFT|temp[2]                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tx_dp_cu:TX|counter_2_tc:COUNTER2TC ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                          ;
+; value_max_1    ; 137   ; Signed Integer                                          ;
+; value_max_2    ; 134   ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tx_dp_cu:TX|counter_2_tc:COUNTER2TC|contatoreX:COUNTER ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tx_dp_cu:TX|counter_2_tc:COUNTER2TC|terminal_count_analyzer:TC_ANALYZER_1 ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                                ;
+; value_max      ; 137   ; Signed Integer                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tx_dp_cu:TX|counter_2_tc:COUNTER2TC|terminal_count_analyzer:TC_ANALYZER_2 ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                                ;
+; value_max      ; 134   ; Signed Integer                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tx_dp_cu:TX|counter_with_tc:COUNTER1TC ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                             ;
+; value_max      ; 8     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tx_dp_cu:TX|counter_with_tc:COUNTER1TC|contatoreX:COUNTER ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                                                ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tx_dp_cu:TX|counter_with_tc:COUNTER1TC|terminal_count_analyzer:TC_ANALYZER ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                                                                 ;
+; value_max      ; 8     ; Signed Integer                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:RX8_SAMPLES ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:REG_DATA_OUT ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_TIME_SAMPLES ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; n              ; 5     ; Signed Integer                                                                     ;
+; value_max      ; 15    ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_TIME_SAMPLES|RX_contatore:COUNTER ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; n              ; 5     ; Signed Integer                                                                                          ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_TIME_SAMPLES|RX_terminal_count_analyzer:TC_ANALYZER ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                      ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------+
+; n              ; 5     ; Signed Integer                                                                                                            ;
+; value_max      ; 15    ; Signed Integer                                                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_SYMBOLS ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                                                ;
+; value_max      ; 8     ; Signed Integer                                                                ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_SYMBOLS|RX_contatore:COUNTER ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                                                                     ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_SYMBOLS|RX_terminal_count_analyzer:TC_ANALYZER ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                 ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                                                                                       ;
+; value_max      ; 8     ; Signed Integer                                                                                                       ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_2_tc:CNT_SAMPLES ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                                         ;
+; value_max_1    ; 4     ; Signed Integer                                                         ;
+; value_max_2    ; 8     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_2_tc:CNT_SAMPLES|RX_contatore:COUNTER ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_2_tc:CNT_SAMPLES|RX_terminal_count_analyzer:TC_ANALYZER_1 ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                            ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                                                                                  ;
+; value_max      ; 4     ; Signed Integer                                                                                                  ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_2_tc:CNT_SAMPLES|RX_terminal_count_analyzer:TC_ANALYZER_2 ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                            ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                                                                                  ;
+; value_max      ; 8     ; Signed Integer                                                                                                  ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_with_tc:CNT_TIME_NOP ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                                             ;
+; value_max      ; 1     ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_with_tc:CNT_TIME_NOP|RX_contatore:COUNTER ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rx_unit:RX|rx_core:UUT|RX_counter_with_tc:CNT_TIME_NOP|RX_terminal_count_analyzer:TC_ANALYZER ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                                                                                    ;
+; value_max      ; 1     ; Signed Integer                                                                                                    ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BusInterface:BI|gen_mux_2_1:MUX ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 8     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BusInterface:BI|n_bit_register:BUFFER_CTRL ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; n_bit          ; 3     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BusInterface:BI|n_bit_register:CTRL_REG_2 ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; n_bit          ; 2     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "BusInterface:BI|Dec3to8:DEC"                                                                  ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; out_data[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "BusInterface:BI|FF:CLR_ATN_FF"                                                          ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; data_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "BusInterface:BI|n_bit_register:BUFFER_CTRL" ;
++--------+-------+----------+--------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                    ;
++--------+-------+----------+--------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                               ;
++--------+-------+----------+--------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "BusInterface:BI|changeDetector:RX_DET|FF:REG" ;
++--------+-------+----------+----------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                      ;
++--------+-------+----------+----------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                 ;
++--------+-------+----------+----------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "BusInterface:BI|gen_mux_2_1:MUX" ;
++----------+-------+----------+-------------------------------+
+; Port     ; Type  ; Severity ; Details                       ;
++----------+-------+----------+-------------------------------+
+; ys[7..3] ; Input ; Info     ; Stuck at GND                  ;
++----------+-------+----------+-------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rx_unit:RX|rx_core:UUT|RX_mux2to1:MUX_SEL_EXPECTED_VAL" ;
++-------+-------+----------+---------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                 ;
++-------+-------+----------+---------------------------------------------------------+
+; data1 ; Input ; Info     ; Stuck at GND                                            ;
+; data2 ; Input ; Info     ; Stuck at VCC                                            ;
++-------+-------+----------+---------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 27                          ;
+; cycloneiii_ff         ; 98                          ;
+;     ENA               ; 36                          ;
+;     ENA SCLR          ; 13                          ;
+;     SCLR              ; 10                          ;
+;     plain             ; 39                          ;
+; cycloneiii_lcell_comb ; 162                         ;
+;     arith             ; 11                          ;
+;         2 data inputs ; 11                          ;
+;     normal            ; 151                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 32                          ;
+;         3 data inputs ; 28                          ;
+;         4 data inputs ; 88                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.89                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Feb 02 22:46:54 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off UART -c UART
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file mux_2_1.vhd
+    Info (12022): Found design unit 1: mux_2_1-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/mux_2_1.vhd Line: 9
+    Info (12023): Found entity 1: mux_2_1 File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/mux_2_1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file gen_mux_2_1.vhd
+    Info (12022): Found design unit 1: gen_mux_2_1-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/gen_mux_2_1.vhd Line: 12
+    Info (12023): Found entity 1: gen_mux_2_1 File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/gen_mux_2_1.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file uart.vhd
+    Info (12022): Found design unit 1: UART-behavior File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/UART.vhd Line: 14
+    Info (12023): Found entity 1: UART File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/UART.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file tx_unit.vhd
+    Info (12022): Found design unit 1: tx_unit-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tx_unit.vhd Line: 19
+    Info (12023): Found entity 1: tx_unit File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tx_unit.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tx_dp_cu.vhd
+    Info (12022): Found design unit 1: tx_dp_cu-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tx_dp_cu.vhd Line: 19
+    Info (12023): Found entity 1: tx_dp_cu File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tx_dp_cu.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file terminal_count_analyzer.vhd
+    Info (12022): Found design unit 1: terminal_count_analyzer-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/terminal_count_analyzer.vhd Line: 14
+    Info (12023): Found entity 1: terminal_count_analyzer File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/terminal_count_analyzer.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tbff.vhd
+    Info (12022): Found design unit 1: tbFF-behavior File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbFF.vhd Line: 8
+    Info (12023): Found entity 1: tbFF File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbFF.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file tbdec3to8.vhd
+    Info (12022): Found design unit 1: tbDec3to8-behavior File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbDec3to8.vhd Line: 8
+    Info (12023): Found entity 1: tbDec3to8 File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbDec3to8.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file tbchangedetector.vhd
+    Info (12022): Found design unit 1: tbChangeDetector-behavior File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbChangeDetector.vhd Line: 8
+    Info (12023): Found entity 1: tbChangeDetector File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbChangeDetector.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file tbbusinterface.vhd
+    Info (12022): Found design unit 1: tbBusInterface-behavioral File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbBusInterface.vhd Line: 8
+    Info (12023): Found entity 1: tbBusInterface File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbBusInterface.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file tb_uart.vhd
+    Info (12022): Found design unit 1: tb_UART-behavioral File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_UART.vhd Line: 8
+    Info (12023): Found entity 1: tb_UART File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_UART.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file tb_tx_dp_cu.vhd
+    Info (12022): Found design unit 1: tb_tx_dp_cu-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_tx_dp_cu.vhd Line: 8
+    Info (12023): Found entity 1: tb_tx_dp_cu File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_tx_dp_cu.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tb_terminal_count_analyzer.vhd
+    Info (12022): Found design unit 1: tb_terminal_count_analyzer-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_terminal_count_analyzer.vhd Line: 8
+    Info (12023): Found entity 1: tb_terminal_count_analyzer File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_terminal_count_analyzer.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tb_sr_ff.vhd
+    Info (12022): Found design unit 1: tb_SR_FF-behavioral File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_SR_FF.vhd Line: 8
+    Info (12023): Found entity 1: tb_SR_FF File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_SR_FF.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file tb_shift_register_piso_8bit.vhd
+    Info (12022): Found design unit 1: tb_shift_register_piso_8bit-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_shift_register_piso_8bit.vhd Line: 7
+    Info (12023): Found entity 1: tb_shift_register_piso_8bit File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_shift_register_piso_8bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file tb_rx_unit.vhd
+    Info (12022): Found design unit 1: tb_rx_unit-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_rx_unit.vhd Line: 9
+    Info (12023): Found entity 1: tb_rx_unit File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_rx_unit.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tb_rx_terminal_count_analyzer.vhd
+    Info (12022): Found design unit 1: tb_RX_terminal_count_analyzer-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_terminal_count_analyzer.vhd Line: 9
+    Info (12023): Found entity 1: tb_RX_terminal_count_analyzer File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_terminal_count_analyzer.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file tb_rx_shift_register.vhd
+    Info (12022): Found design unit 1: TB_RX_SHIFT_REGISTER-behave File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/TB_RX_SHIFT_REGISTER.vhd Line: 11
+    Info (12023): Found entity 1: TB_RX_SHIFT_REGISTER File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/TB_RX_SHIFT_REGISTER.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file tb_rx_recognize_value.vhd
+    Info (12022): Found design unit 1: tb_RX_recognize_value-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_recognize_value.vhd Line: 9
+    Info (12023): Found entity 1: tb_RX_recognize_value File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_recognize_value.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tb_rx_recognize_start.vhd
+    Info (12022): Found design unit 1: tb_RX_recognize_start-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_recognize_start.vhd Line: 9
+    Info (12023): Found entity 1: tb_RX_recognize_start File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_recognize_start.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tb_rx_mux2to1.vhd
+    Info (12022): Found design unit 1: tb_RX_mux2to1-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_mux2to1.vhd Line: 9
+    Info (12023): Found entity 1: tb_RX_mux2to1 File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_mux2to1.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tb_rx_flip_flop.vhd
+    Info (12022): Found design unit 1: tb_RX_flip_flop-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_flip_flop.vhd Line: 7
+    Info (12023): Found entity 1: tb_RX_flip_flop File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_flip_flop.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file tb_rx_counter_with_tc.vhd
+    Info (12022): Found design unit 1: tb_RX_counter_with_tc-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_counter_with_tc.vhd Line: 8
+    Info (12023): Found entity 1: tb_RX_counter_with_tc File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_counter_with_tc.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file tb_rx_counter_2_tc.vhd
+    Info (12022): Found design unit 1: tb_RX_counter_2_tc-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_counter_2_tc.vhd Line: 9
+    Info (12023): Found entity 1: tb_RX_counter_2_tc File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_counter_2_tc.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tb_rx_core.vhd
+    Info (12022): Found design unit 1: tb_rx_core-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_rx_core.vhd Line: 9
+    Info (12023): Found entity 1: tb_rx_core File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_rx_core.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file tb_rx_contatore.vhd
+    Info (12022): Found design unit 1: tb_RX_contatore-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_contatore.vhd Line: 7
+    Info (12023): Found entity 1: tb_RX_contatore File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_contatore.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file tb_flip_flop.vhd
+    Info (12022): Found design unit 1: tb_flip_flop-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_flip_flop.vhd Line: 8
+    Info (12023): Found entity 1: tb_flip_flop File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_flip_flop.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tb_datapath.vhd
+    Info (12022): Found design unit 1: tb_datapath-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_datapath.vhd Line: 8
+    Info (12023): Found entity 1: tb_datapath File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_datapath.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tb_cu_rx.vhd
+    Info (12022): Found design unit 1: tb_CU_RX-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_CU_RX.vhd Line: 9
+    Info (12023): Found entity 1: tb_CU_RX File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_CU_RX.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tb_counter_with_tc.vhd
+    Info (12022): Found design unit 1: tb_counter_with_tc-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_counter_with_tc.vhd Line: 8
+    Info (12023): Found entity 1: tb_counter_with_tc File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_counter_with_tc.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tb_counter_2_tc.vhd
+    Info (12022): Found design unit 1: tb_counter_2_tc-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_counter_2_tc.vhd Line: 8
+    Info (12023): Found entity 1: tb_counter_2_tc File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_counter_2_tc.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tb_contatorex.vhd
+    Info (12022): Found design unit 1: tb_contatoreX-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_contatoreX.vhd Line: 7
+    Info (12023): Found entity 1: tb_contatoreX File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_contatoreX.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file tb_blocco_txd.vhd
+    Info (12022): Found design unit 1: tb_blocco_txd-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_blocco_txd.vhd Line: 7
+    Info (12023): Found entity 1: tb_blocco_txd File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_blocco_txd.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file sr_ff.vhd
+    Info (12022): Found design unit 1: SR_FF-behavioral File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/SR_FF.vhd Line: 10
+    Info (12023): Found entity 1: SR_FF File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/SR_FF.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file shift_register_piso_8bit.vhd
+    Info (12022): Found design unit 1: shift_register_piso_8bit-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/shift_register_piso_8bit.vhd Line: 17
+    Info (12023): Found entity 1: shift_register_piso_8bit File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/shift_register_piso_8bit.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file rx_unit.vhd
+    Info (12022): Found design unit 1: RX_UNIT-BEH File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_unit.vhd Line: 17
+    Info (12023): Found entity 1: rx_unit File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_unit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file rx_terminal_count_analyzer.vhd
+    Info (12022): Found design unit 1: RX_terminal_count_analyzer-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_terminal_count_analyzer.vhd Line: 14
+    Info (12023): Found entity 1: RX_terminal_count_analyzer File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_terminal_count_analyzer.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file rx_shift_register.vhd
+    Info (12022): Found design unit 1: RX_SHIFT_REGISTER-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_SHIFT_REGISTER.vhd Line: 24
+    Info (12023): Found entity 1: RX_SHIFT_REGISTER File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_SHIFT_REGISTER.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file rx_recognize_value.vhd
+    Info (12022): Found design unit 1: RX_recognize_value-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_recognize_value.vhd Line: 13
+    Info (12023): Found entity 1: RX_recognize_value File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_recognize_value.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file rx_recognize_start.vhd
+    Info (12022): Found design unit 1: RX_recognize_start-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_recognize_start.vhd Line: 12
+    Info (12023): Found entity 1: RX_recognize_start File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_recognize_start.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file rx_mux2to1.vhd
+    Info (12022): Found design unit 1: RX_mux2to1-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_mux2to1.vhd Line: 13
+    Info (12023): Found entity 1: RX_mux2to1 File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_mux2to1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file rx_flip_flop.vhd
+    Info (12022): Found design unit 1: RX_flip_flop-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_flip_flop.vhd Line: 14
+    Info (12023): Found entity 1: RX_flip_flop File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_flip_flop.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file rx_counter_with_tc.vhd
+    Info (12022): Found design unit 1: RX_counter_with_tc-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_counter_with_tc.vhd Line: 16
+    Info (12023): Found entity 1: RX_counter_with_tc File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_counter_with_tc.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file rx_counter_2_tc.vhd
+    Info (12022): Found design unit 1: RX_counter_2_tc-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_counter_2_tc.vhd Line: 19
+    Info (12023): Found entity 1: RX_counter_2_tc File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_counter_2_tc.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file rx_core.vhd
+    Info (12022): Found design unit 1: rx_core-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_core.vhd Line: 69
+    Info (12023): Found entity 1: rx_core File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_core.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file rx_contatore.vhd
+    Info (12022): Found design unit 1: RX_contatore-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_contatore.vhd Line: 15
+    Info (12023): Found entity 1: RX_contatore File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_contatore.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file n_bit_register.vhd
+    Info (12022): Found design unit 1: n_bit_register-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/n_bit_register.vhd Line: 12
+    Info (12023): Found entity 1: n_bit_register File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/n_bit_register.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file flip_flop.vhd
+    Info (12022): Found design unit 1: flip_flop-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/flip_flop.vhd Line: 16
+    Info (12023): Found entity 1: flip_flop File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/flip_flop.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ff.vhd
+    Info (12022): Found design unit 1: FF-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/FF.vhd Line: 10
+    Info (12023): Found entity 1: FF File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/FF.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file dec3to8.vhd
+    Info (12022): Found design unit 1: Dec3to8-behavior File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/Dec3to8.vhd Line: 10
+    Info (12023): Found entity 1: Dec3to8 File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/Dec3to8.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file cu_rx.vhd
+    Info (12022): Found design unit 1: CU_RX-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/CU_RX.vhd Line: 44
+    Info (12023): Found entity 1: CU_RX File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/CU_RX.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file counter_with_tc.vhd
+    Info (12022): Found design unit 1: counter_with_tc-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/counter_with_tc.vhd Line: 16
+    Info (12023): Found entity 1: counter_with_tc File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/counter_with_tc.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file counter_2_tc.vhd
+    Info (12022): Found design unit 1: counter_2_tc-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/counter_2_tc.vhd Line: 19
+    Info (12023): Found entity 1: counter_2_tc File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/counter_2_tc.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file contatorex.vhd
+    Info (12022): Found design unit 1: contatoreX-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/contatoreX.vhd Line: 15
+    Info (12023): Found entity 1: contatoreX File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/contatoreX.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file changedetector.vhd
+    Info (12022): Found design unit 1: changeDetector-behavioral File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/changeDetector.vhd Line: 10
+    Info (12023): Found entity 1: changeDetector File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/changeDetector.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file businterface.vhd
+    Info (12022): Found design unit 1: BusInterface-behavioral File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/BusInterface.vhd Line: 23
+    Info (12023): Found entity 1: BusInterface File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/BusInterface.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file blocco_txd.vhd
+    Info (12022): Found design unit 1: blocco_txd-beh File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/blocco_txd.vhd Line: 21
+    Info (12023): Found entity 1: blocco_txd File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/blocco_txd.vhd Line: 4
+Info (12127): Elaborating entity "UART" for the top level hierarchy
+Info (12128): Elaborating entity "tx_dp_cu" for hierarchy "tx_dp_cu:TX" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/UART.vhd Line: 63
+Info (12128): Elaborating entity "blocco_txd" for hierarchy "tx_dp_cu:TX|blocco_txd:blocco_tx" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tx_dp_cu.vhd Line: 82
+Info (12128): Elaborating entity "shift_register_piso_8bit" for hierarchy "tx_dp_cu:TX|blocco_txd:blocco_tx|shift_register_piso_8bit:BLOCCO_SHIFT" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/blocco_txd.vhd Line: 42
+Warning (10036): Verilog HDL or VHDL warning at shift_register_piso_8bit.vhd(19): object "VAL_REG" assigned a value but never read File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/shift_register_piso_8bit.vhd Line: 19
+Info (12128): Elaborating entity "SR_FF" for hierarchy "tx_dp_cu:TX|SR_FF:FF" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tx_dp_cu.vhd Line: 93
+Info (12128): Elaborating entity "counter_2_tc" for hierarchy "tx_dp_cu:TX|counter_2_tc:COUNTER2TC" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tx_dp_cu.vhd Line: 108
+Info (12128): Elaborating entity "contatoreX" for hierarchy "tx_dp_cu:TX|counter_2_tc:COUNTER2TC|contatoreX:COUNTER" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/counter_2_tc.vhd Line: 49
+Info (12128): Elaborating entity "terminal_count_analyzer" for hierarchy "tx_dp_cu:TX|counter_2_tc:COUNTER2TC|terminal_count_analyzer:TC_ANALYZER_1" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/counter_2_tc.vhd Line: 57
+Info (12128): Elaborating entity "terminal_count_analyzer" for hierarchy "tx_dp_cu:TX|counter_2_tc:COUNTER2TC|terminal_count_analyzer:TC_ANALYZER_2" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/counter_2_tc.vhd Line: 65
+Info (12128): Elaborating entity "counter_with_tc" for hierarchy "tx_dp_cu:TX|counter_with_tc:COUNTER1TC" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tx_dp_cu.vhd Line: 122
+Info (12128): Elaborating entity "contatoreX" for hierarchy "tx_dp_cu:TX|counter_with_tc:COUNTER1TC|contatoreX:COUNTER" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/counter_with_tc.vhd Line: 45
+Info (12128): Elaborating entity "terminal_count_analyzer" for hierarchy "tx_dp_cu:TX|counter_with_tc:COUNTER1TC|terminal_count_analyzer:TC_ANALYZER" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/counter_with_tc.vhd Line: 53
+Info (12128): Elaborating entity "rx_unit" for hierarchy "rx_unit:RX" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/UART.vhd Line: 70
+Info (12128): Elaborating entity "CU_RX" for hierarchy "rx_unit:RX|CU_RX:CU" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_unit.vhd Line: 157
+Info (12128): Elaborating entity "rx_core" for hierarchy "rx_unit:RX|rx_core:UUT" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_unit.vhd Line: 191
+Info (12128): Elaborating entity "RX_SHIFT_REGISTER" for hierarchy "rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:RX8_SAMPLES" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_core.vhd Line: 167
+Info (12128): Elaborating entity "RX_flip_flop" for hierarchy "rx_unit:RX|rx_core:UUT|RX_SHIFT_REGISTER:RX8_SAMPLES|RX_flip_flop:\SHIFT_REG_GEN:0:FLIP_FLOP_GEN" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_SHIFT_REGISTER.vhd Line: 37
+Info (12128): Elaborating entity "RX_recognize_start" for hierarchy "rx_unit:RX|rx_core:UUT|RX_recognize_start:RICONOSCITORE_START" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_core.vhd Line: 180
+Info (12128): Elaborating entity "RX_recognize_value" for hierarchy "rx_unit:RX|rx_core:UUT|RX_recognize_value:DECISORE_UNIT" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_core.vhd Line: 199
+Info (12128): Elaborating entity "RX_mux2to1" for hierarchy "rx_unit:RX|rx_core:UUT|RX_mux2to1:MUX_SEL_EXPECTED_VAL" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_core.vhd Line: 207
+Info (12128): Elaborating entity "RX_counter_with_tc" for hierarchy "rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_TIME_SAMPLES" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_core.vhd Line: 243
+Info (12128): Elaborating entity "RX_contatore" for hierarchy "rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_TIME_SAMPLES|RX_contatore:COUNTER" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_counter_with_tc.vhd Line: 45
+Info (12128): Elaborating entity "RX_terminal_count_analyzer" for hierarchy "rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_TIME_SAMPLES|RX_terminal_count_analyzer:TC_ANALYZER" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_counter_with_tc.vhd Line: 53
+Info (12128): Elaborating entity "RX_counter_with_tc" for hierarchy "rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_SYMBOLS" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_core.vhd Line: 253
+Info (12128): Elaborating entity "RX_contatore" for hierarchy "rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_SYMBOLS|RX_contatore:COUNTER" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_counter_with_tc.vhd Line: 45
+Info (12128): Elaborating entity "RX_terminal_count_analyzer" for hierarchy "rx_unit:RX|rx_core:UUT|RX_counter_with_tc:COUNTER_SYMBOLS|RX_terminal_count_analyzer:TC_ANALYZER" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_counter_with_tc.vhd Line: 53
+Info (12128): Elaborating entity "RX_counter_2_tc" for hierarchy "rx_unit:RX|rx_core:UUT|RX_counter_2_tc:CNT_SAMPLES" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_core.vhd Line: 265
+Info (12128): Elaborating entity "RX_terminal_count_analyzer" for hierarchy "rx_unit:RX|rx_core:UUT|RX_counter_2_tc:CNT_SAMPLES|RX_terminal_count_analyzer:TC_ANALYZER_1" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_counter_2_tc.vhd Line: 57
+Info (12128): Elaborating entity "RX_counter_with_tc" for hierarchy "rx_unit:RX|rx_core:UUT|RX_counter_with_tc:CNT_TIME_NOP" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_core.vhd Line: 278
+Info (12128): Elaborating entity "RX_contatore" for hierarchy "rx_unit:RX|rx_core:UUT|RX_counter_with_tc:CNT_TIME_NOP|RX_contatore:COUNTER" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_counter_with_tc.vhd Line: 45
+Info (12128): Elaborating entity "RX_terminal_count_analyzer" for hierarchy "rx_unit:RX|rx_core:UUT|RX_counter_with_tc:CNT_TIME_NOP|RX_terminal_count_analyzer:TC_ANALYZER" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_counter_with_tc.vhd Line: 53
+Info (12128): Elaborating entity "BusInterface" for hierarchy "BusInterface:BI" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/UART.vhd Line: 78
+Warning (10541): VHDL Signal Declaration warning at BusInterface.vhd(63): used implicit default value for signal "ATN_STATE" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/BusInterface.vhd Line: 63
+Info (12128): Elaborating entity "gen_mux_2_1" for hierarchy "BusInterface:BI|gen_mux_2_1:MUX" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/BusInterface.vhd Line: 83
+Info (12128): Elaborating entity "mux_2_1" for hierarchy "BusInterface:BI|gen_mux_2_1:MUX|mux_2_1:\a:0:muxes" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/gen_mux_2_1.vhd Line: 22
+Info (12128): Elaborating entity "changeDetector" for hierarchy "BusInterface:BI|changeDetector:RX_DET" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/BusInterface.vhd Line: 89
+Info (12128): Elaborating entity "FF" for hierarchy "BusInterface:BI|changeDetector:RX_DET|FF:REG" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/changeDetector.vhd Line: 23
+Info (12128): Elaborating entity "n_bit_register" for hierarchy "BusInterface:BI|n_bit_register:BUFFER_CTRL" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/BusInterface.vhd Line: 100
+Info (12128): Elaborating entity "n_bit_register" for hierarchy "BusInterface:BI|n_bit_register:CTRL_REG_2" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/BusInterface.vhd Line: 103
+Info (12128): Elaborating entity "Dec3to8" for hierarchy "BusInterface:BI|Dec3to8:DEC" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/BusInterface.vhd Line: 115
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "ATN" is stuck at GND File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/UART.vhd Line: 7
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 7 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ATNACK" File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/UART.vhd Line: 6
+Info (21057): Implemented 191 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 17 input pins
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 164 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4798 megabytes
+    Info: Processing ended: Tue Feb 02 22:47:08 2021
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:30
+
+

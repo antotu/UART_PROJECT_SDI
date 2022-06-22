@@ -1,0 +1,219 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity tb_CU_RX is
+end tb_CU_RX;
+
+
+architecture beh of tb_CU_RX is
+
+component CU_RX is 
+port (
+CLK : IN STD_LOGIC;
+
+-- INPUT
+EN_RX : IN STD_LOGIC;
+ERROR_STATUS : IN STD_LOGIC;
+START : IN STD_LOGIC;
+TC_TIME_SAMPLE : IN STD_LOGIC;
+TC_8_SAMPLES : IN STD_LOGIC;
+TC_4_SAMPLES : IN STD_LOGIC;
+TC_READ_ALL : IN STD_LOGIC;
+
+-- OUTPUT
+
+LD_SHIFT_R8 : OUT STD_LOGIC;
+CLEAR_R8 : OUT STD_LOGIC;
+MUX_SEL_STOP_BIT : OUT STD_LOGIC;
+LD_ERROR : OUT STD_LOGIC;
+CLEAR_ERROR : OUT STD_LOGIC;
+CLEAR_BUSY : OUT STD_LOGIC;
+LD_BUSY : OUT STD_LOGIC;
+LD_SHIFT_DOUT : OUT STD_LOGIC;
+EN_CNT_TIME_SAMPLES : OUT STD_LOGIC;
+CLEAR_CNT_TIME_SAMPLES : OUT STD_LOGIC;
+EN_CNT_8_SAMPLES : OUT STD_LOGIC;
+CLEAR_CNT_8_SAMPLES : OUT STD_LOGIC;
+EN_CNT_SYMBOL : OUT STD_LOGIC;
+CLEAR_CNT_SYMBOL : OUT STD_LOGIC;
+CLEAR_DONE : OUT STD_LOGIC;
+LD_DONE : OUT STD_LOGIC
+);
+ end component;
+ 
+ 
+signal CLK : STD_LOGIC;
+
+-- INPUT
+signal EN_RX : STD_LOGIC;
+signal ERROR_STATUS : STD_LOGIC;
+signal START : STD_LOGIC;
+signal TC_TIME_SAMPLE : STD_LOGIC;
+signal TC_8_SAMPLES : STD_LOGIC;
+signal TC_4_SAMPLES : STD_LOGIC;
+signal TC_READ_ALL : STD_LOGIC;
+
+-- OUTPUT
+
+signal LD_SHIFT_R8 : STD_LOGIC;
+signal CLEAR_R8 : STD_LOGIC;
+signal MUX_SEL_STOP_BIT : STD_LOGIC;
+signal LD_ERROR : STD_LOGIC;
+signal CLEAR_ERROR : STD_LOGIC;
+signal CLEAR_BUSY : STD_LOGIC;
+signal LD_BUSY : STD_LOGIC;
+signal LD_SHIFT_DOUT : STD_LOGIC;
+signal EN_CNT_TIME_SAMPLES : STD_LOGIC;
+signal CLEAR_CNT_TIME_SAMPLES : STD_LOGIC;
+signal EN_CNT_8_SAMPLES : STD_LOGIC;
+signal CLEAR_CNT_8_SAMPLES : STD_LOGIC;
+signal EN_CNT_SYMBOL : STD_LOGIC;
+signal CLEAR_CNT_SYMBOL : STD_LOGIC;
+signal CLEAR_DONE : STD_LOGIC;
+signal LD_DONE : STD_LOGIC;
+signal VAL_ERROR : STD_LOGIC_VECTOR(1 downto 0) := "10";
+
+begin
+
+UUT: CU_RX port map (
+CLK => CLK,
+
+EN_RX => EN_RX,
+ERROR_STATUS => ERROR_STATUS,
+START => START,
+TC_TIME_SAMPLE => TC_TIME_SAMPLE,
+TC_8_SAMPLES => TC_8_SAMPLES,
+TC_4_SAMPLES => TC_4_SAMPLES,
+TC_READ_ALL => TC_READ_ALL,
+
+
+LD_SHIFT_R8 => LD_SHIFT_R8,
+CLEAR_R8 => CLEAR_R8,
+MUX_SEL_STOP_BIT => MUX_SEL_STOP_BIT,
+LD_ERROR => LD_ERROR,
+CLEAR_ERROR => CLEAR_ERROR,
+CLEAR_BUSY => CLEAR_BUSY,
+LD_BUSY => LD_BUSY,
+LD_SHIFT_DOUT => LD_SHIFT_DOUT,
+EN_CNT_TIME_SAMPLES => EN_CNT_TIME_SAMPLES,
+CLEAR_CNT_TIME_SAMPLES => CLEAR_CNT_TIME_SAMPLES,
+EN_CNT_8_SAMPLES => EN_CNT_8_SAMPLES,
+CLEAR_CNT_8_SAMPLES => CLEAR_CNT_8_SAMPLES,
+EN_CNT_SYMBOL => EN_CNT_SYMBOL,
+CLEAR_CNT_SYMBOL => CLEAR_CNT_SYMBOL,
+CLEAR_DONE => CLEAR_DONE,
+LD_DONE => LD_DONE
+);
+
+
+CLK_GEN : process
+begin
+CLK <= '1';
+wait for 10 ns;
+CLK <= '0';
+wait for 10 ns;
+end process;
+
+
+SIGNAL_GEN : process
+
+begin
+
+
+EN_RX <= '0';
+TC_TIME_SAMPLE <= '0';
+wait for 40 ns;
+
+for j in 0 to 1 loop
+EN_RX <= '1';
+wait for 60 ns;
+TC_TIME_SAMPLE <= '1';
+wait for 20 ns;
+TC_TIME_SAMPLE <= '0';
+wait for 80 ns;
+TC_TIME_SAMPLE <= '1';
+wait for 20 ns;
+TC_TIME_SAMPLE <= '0';
+START <= '0';
+wait for 120 ns;
+TC_TIME_SAMPLE <= '1';
+wait for 20 ns;
+TC_TIME_SAMPLE <= '0';
+wait for 120 ns;
+TC_TIME_SAMPLE <= '1';
+wait for 20 ns;
+TC_TIME_SAMPLE <= '0';
+TC_4_SAMPLES <= '1';
+wait for 120 ns;
+TC_TIME_SAMPLE <= '1';
+wait for 20 ns;
+TC_TIME_SAMPLE <= '0';
+ERROR_STATUS <= not(VAL_ERROR(j));
+wait for 1200 ns;
+end loop;
+
+TC_TIME_SAMPLE <= '1';
+wait for 20 ns;
+TC_TIME_SAMPLE <= '0';
+wait for 120 ns;
+
+TC_TIME_SAMPLE <= '1';
+wait for 20 ns;
+TC_TIME_SAMPLE <= '0';
+wait for 120 ns;
+
+TC_TIME_SAMPLE <= '1';
+wait for 20 ns;
+TC_TIME_SAMPLE <= '0';
+TC_8_SAMPLES <= '1';
+wait for 120 ns;
+
+TC_8_SAMPLES <= '0';
+TC_TIME_SAMPLE <= '1';
+wait for 20 ns;
+TC_TIME_SAMPLE <= '0';
+wait for 1200 ns;
+TC_TIME_SAMPLE <= '1';
+wait for 20 ns;
+TC_TIME_SAMPLE <= '0';
+wait for 1200 ns;
+
+TC_TIME_SAMPLE <= '1';
+wait for 20 ns;
+TC_TIME_SAMPLE <= '0';
+wait for 1200 ns;
+
+
+TC_TIME_SAMPLE <= '1';
+wait for 20 ns;
+TC_TIME_SAMPLE <= '0';
+TC_8_SAMPLES <= '1';
+wait for 1200 ns;
+TC_8_SAMPLES <= '0';
+
+TC_TIME_SAMPLE <= '1';
+wait for 20 ns;
+TC_TIME_SAMPLE <= '0';
+TC_READ_ALL <= '1';
+wait for 1200 ns;
+
+
+TC_TIME_SAMPLE <= '1';
+wait for 20 ns;
+TC_TIME_SAMPLE <= '0';
+wait for 1200 ns;
+
+
+TC_TIME_SAMPLE <= '1';
+wait for 20 ns;
+TC_TIME_SAMPLE <= '0';
+TC_8_SAMPLES <= '1';
+wait for 1200 ns;
+TC_8_SAMPLES <= '0';
+
+wait;
+end process;
+
+
+end beh;

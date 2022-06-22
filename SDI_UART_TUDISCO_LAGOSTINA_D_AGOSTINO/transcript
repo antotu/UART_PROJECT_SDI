@@ -1,0 +1,324 @@
+# Compile of tb_shift_register_piso_8bit.vhd was successful.
+# Compile of tb_shift_register_piso_8_bit.vhd was successful.
+# Compile of tbBusInterface.vhd was successful.
+# Compile of BusInterface.vhd was successful.
+# Compile of UART.vhd was successful.
+# Compile of rx_core.vhd was successful.
+# Compile of tb_tx_dp_cu.vhd was successful.
+# Compile of tx_dp_cu.vhd was successful.
+# Compile of CU_RX.vhd was successful.
+# Compile of tb_rx_unit.vhd was successful.
+# Compile of SR_FF.vhd was successful.
+# Compile of rx_unit.vhd was successful.
+# Compile of tb_UART.vhd was successful.
+# Compile of tb_SR_FF.vhd was successful.
+# Compile of blocco_txd.vhd was successful.
+# Compile of shift_register_piso_8bit.vhd was successful.
+# Compile of tb_blocco_txd.vhd was successful.
+# Compile of changeDetector.vhd was successful.
+# Compile of tbChangeDetector.vhd was successful.
+# Compile of tx_unit.vhd was successful.
+# Compile of RX_SHIFT_REGISTER.vhd was successful.
+# Compile of TB_RX_SHIFT_REGISTER.vhd was successful.
+# Compile of RX_terminal_count_analyzer.vhd was successful.
+# Compile of tb_RX_terminal_count_analyzer.vhd was successful.
+# Compile of tb_RX_recognize_value.vhd was successful.
+# Compile of tb_RX_recognize_start.vhd was successful.
+# Compile of tb_RX_mux2to1.vhd was successful.
+# Compile of tb_RX_flip_flop.vhd was successful.
+# Compile of tb_counter_with_tc.vhd was successful.
+# Compile of tb_contatoreX.vhd was successful.
+# Compile of tb_counter_2_tc.vhd was successful.
+# Compile of tb_terminal_count_analyzer.vhd was successful.
+# Compile of tb_RX_counter_with_tc.vhd was successful.
+# Compile of tb_RX_counter_2_tc.vhd was successful.
+# Compile of tb_RX_contatore.vhd was successful.
+# Compile of RX_recognize_value.vhd was successful.
+# Compile of RX_recognize_start.vhd was successful.
+# Compile of RX_mux2to1.vhd was successful.
+# Compile of RX_flip_flop.vhd was successful.
+# Compile of RX_counter_with_tc.vhd was successful.
+# Compile of RX_counter_2_tc.vhd was successful.
+# Compile of RX_contatore.vhd was successful.
+# Compile of flip_flop.vhd was successful.
+# Compile of tb_datapath.vhd was successful.
+# Compile of terminal_count_analyzer.vhd was successful.
+# Compile of counter_2_tc.vhd was successful.
+# Compile of counter_with_tc.vhd was successful.
+# Compile of tb_CU_RX.vhd was successful.
+# Compile of contatoreX.vhd was successful.
+# Compile of FF.vhd was successful.
+# Compile of tbDec3to8.vhd was successful.
+# Compile of n_bit_register.vhd was successful.
+# Compile of tbFF.vhd was successful.
+# Compile of Dec3to8.vhd was successful.
+# Compile of tb_rx_core.vhd was successful.
+# Compile of tb_flip_flop.vhd was successful.
+# Compile of gen_mux_2_1.vhd was successful.
+# Compile of mux_2_1.vhd was successful.
+# 58 compiles, 0 failed with no errors.
+vsim -gui work.tb_uart -t 10ps
+# vsim -gui work.tb_uart -t 10ps 
+# Start time: 22:51:56 on Feb 02,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_uart(behavioral)
+# Loading work.uart(behavior)
+# Loading ieee.numeric_std(body)
+# Loading work.tx_dp_cu(beh)
+# Loading work.blocco_txd(beh)
+# Loading work.shift_register_piso_8bit(beh)
+# Loading work.sr_ff(behavioral)
+# Loading work.counter_2_tc(beh)
+# Loading work.contatorex(beh)
+# Loading work.terminal_count_analyzer(beh)
+# Loading work.counter_with_tc(beh)
+# Loading work.rx_unit(beh)
+# Loading work.cu_rx(beh)
+# Loading work.rx_core(beh)
+# Loading work.rx_shift_register(beh)
+# Loading work.rx_flip_flop(beh)
+# Loading work.rx_recognize_start(beh)
+# Loading work.rx_recognize_value(beh)
+# Loading work.rx_mux2to1(beh)
+# Loading work.rx_counter_with_tc(beh)
+# Loading work.rx_contatore(beh)
+# Loading work.rx_terminal_count_analyzer(beh)
+# Loading work.rx_counter_2_tc(beh)
+# Loading work.businterface(behavioral)
+# Loading work.gen_mux_2_1(beh)
+# ** Fatal: (vsim-3807) Types do not match between component and entity for port "xs".
+#    Time: 0 ps  Iteration: 0  Instance: /tb_uart/DUT/BI/MUX File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/gen_mux_2_1.vhd Line: 7
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 22:51:56 on Feb 02,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 5
+# Compile of tb_shift_register_piso_8bit.vhd was successful.
+# Compile of tb_shift_register_piso_8_bit.vhd was successful.
+# Compile of tbBusInterface.vhd was successful.
+# Compile of BusInterface.vhd was successful.
+# Compile of UART.vhd was successful.
+# Compile of rx_core.vhd was successful.
+# Compile of tb_tx_dp_cu.vhd was successful.
+# Compile of tx_dp_cu.vhd was successful.
+# Compile of CU_RX.vhd was successful.
+# Compile of tb_rx_unit.vhd was successful.
+# Compile of SR_FF.vhd was successful.
+# Compile of rx_unit.vhd was successful.
+# Compile of tb_UART.vhd was successful.
+# Compile of tb_SR_FF.vhd was successful.
+# Compile of blocco_txd.vhd was successful.
+# Compile of shift_register_piso_8bit.vhd was successful.
+# Compile of tb_blocco_txd.vhd was successful.
+# Compile of changeDetector.vhd was successful.
+# Compile of tbChangeDetector.vhd was successful.
+# Compile of tx_unit.vhd was successful.
+# Compile of RX_SHIFT_REGISTER.vhd was successful.
+# Compile of TB_RX_SHIFT_REGISTER.vhd was successful.
+# Compile of RX_terminal_count_analyzer.vhd was successful.
+# Compile of tb_RX_terminal_count_analyzer.vhd was successful.
+# Compile of tb_RX_recognize_value.vhd was successful.
+# Compile of tb_RX_recognize_start.vhd was successful.
+# Compile of tb_RX_mux2to1.vhd was successful.
+# Compile of tb_RX_flip_flop.vhd was successful.
+# Compile of tb_counter_with_tc.vhd was successful.
+# Compile of tb_contatoreX.vhd was successful.
+# Compile of tb_counter_2_tc.vhd was successful.
+# Compile of tb_terminal_count_analyzer.vhd was successful.
+# Compile of tb_RX_counter_with_tc.vhd was successful.
+# Compile of tb_RX_counter_2_tc.vhd was successful.
+# Compile of tb_RX_contatore.vhd was successful.
+# Compile of RX_recognize_value.vhd was successful.
+# Compile of RX_recognize_start.vhd was successful.
+# Compile of RX_mux2to1.vhd was successful.
+# Compile of RX_flip_flop.vhd was successful.
+# Compile of RX_counter_with_tc.vhd was successful.
+# Compile of RX_counter_2_tc.vhd was successful.
+# Compile of RX_contatore.vhd was successful.
+# Compile of flip_flop.vhd was successful.
+# Compile of tb_datapath.vhd was successful.
+# Compile of terminal_count_analyzer.vhd was successful.
+# Compile of counter_2_tc.vhd was successful.
+# Compile of counter_with_tc.vhd was successful.
+# Compile of tb_CU_RX.vhd was successful.
+# Compile of contatoreX.vhd was successful.
+# Compile of FF.vhd was successful.
+# Compile of tbDec3to8.vhd was successful.
+# Compile of n_bit_register.vhd was successful.
+# Compile of tbFF.vhd was successful.
+# Compile of Dec3to8.vhd was successful.
+# Compile of tb_rx_core.vhd was successful.
+# Compile of tb_flip_flop.vhd was successful.
+# Compile of gen_mux_2_1.vhd was successful.
+# Compile of mux_2_1.vhd was successful.
+# 58 compiles, 0 failed with no errors.
+vsim -gui -t 10ps work.tb_uart
+# vsim -gui -t 10ps work.tb_uart 
+# Start time: 22:54:10 on Feb 02,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_uart(behavioral)
+# Loading work.uart(behavior)
+# Loading ieee.numeric_std(body)
+# Loading work.tx_dp_cu(beh)
+# Loading work.blocco_txd(beh)
+# Loading work.shift_register_piso_8bit(beh)
+# Loading work.sr_ff(behavioral)
+# Loading work.counter_2_tc(beh)
+# Loading work.contatorex(beh)
+# Loading work.terminal_count_analyzer(beh)
+# Loading work.counter_with_tc(beh)
+# Loading work.rx_unit(beh)
+# Loading work.cu_rx(beh)
+# Loading work.rx_core(beh)
+# Loading work.rx_shift_register(beh)
+# Loading work.rx_flip_flop(beh)
+# Loading work.rx_recognize_start(beh)
+# Loading work.rx_recognize_value(beh)
+# Loading work.rx_mux2to1(beh)
+# Loading work.rx_counter_with_tc(beh)
+# Loading work.rx_contatore(beh)
+# Loading work.rx_terminal_count_analyzer(beh)
+# Loading work.rx_counter_2_tc(beh)
+# Loading work.businterface(behavioral)
+# Loading work.gen_mux_2_1(beh)
+# ** Fatal: (vsim-3807) Types do not match between component and entity for port "xs".
+#    Time: 0 ps  Iteration: 0  Instance: /tb_uart/DUT/BI/MUX File: C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/gen_mux_2_1.vhd Line: 7
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 22:54:11 on Feb 02,2021, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 2
+# Compile of tb_shift_register_piso_8bit.vhd was successful.
+# Compile of tb_shift_register_piso_8_bit.vhd was successful.
+# Compile of tbBusInterface.vhd was successful.
+# Compile of BusInterface.vhd was successful.
+# Compile of UART.vhd was successful.
+# Compile of rx_core.vhd was successful.
+# Compile of tb_tx_dp_cu.vhd was successful.
+# Compile of tx_dp_cu.vhd was successful.
+# Compile of CU_RX.vhd was successful.
+# Compile of tb_rx_unit.vhd was successful.
+# Compile of SR_FF.vhd was successful.
+# Compile of rx_unit.vhd was successful.
+# Compile of tb_UART.vhd was successful.
+# Compile of tb_SR_FF.vhd was successful.
+# Compile of blocco_txd.vhd was successful.
+# Compile of shift_register_piso_8bit.vhd was successful.
+# Compile of tb_blocco_txd.vhd was successful.
+# Compile of changeDetector.vhd was successful.
+# Compile of tbChangeDetector.vhd was successful.
+# Compile of tx_unit.vhd was successful.
+# Compile of RX_SHIFT_REGISTER.vhd was successful.
+# Compile of TB_RX_SHIFT_REGISTER.vhd was successful.
+# Compile of RX_terminal_count_analyzer.vhd was successful.
+# Compile of tb_RX_terminal_count_analyzer.vhd was successful.
+# Compile of tb_RX_recognize_value.vhd was successful.
+# Compile of tb_RX_recognize_start.vhd was successful.
+# Compile of tb_RX_mux2to1.vhd was successful.
+# Compile of tb_RX_flip_flop.vhd was successful.
+# Compile of tb_counter_with_tc.vhd was successful.
+# Compile of tb_contatoreX.vhd was successful.
+# Compile of tb_counter_2_tc.vhd was successful.
+# Compile of tb_terminal_count_analyzer.vhd was successful.
+# Compile of tb_RX_counter_with_tc.vhd was successful.
+# Compile of tb_RX_counter_2_tc.vhd was successful.
+# Compile of tb_RX_contatore.vhd was successful.
+# Compile of RX_recognize_value.vhd was successful.
+# Compile of RX_recognize_start.vhd was successful.
+# Compile of RX_mux2to1.vhd was successful.
+# Compile of RX_flip_flop.vhd was successful.
+# Compile of RX_counter_with_tc.vhd was successful.
+# Compile of RX_counter_2_tc.vhd was successful.
+# Compile of RX_contatore.vhd was successful.
+# Compile of flip_flop.vhd was successful.
+# Compile of tb_datapath.vhd was successful.
+# Compile of terminal_count_analyzer.vhd was successful.
+# Compile of counter_2_tc.vhd was successful.
+# Compile of counter_with_tc.vhd was successful.
+# Compile of tb_CU_RX.vhd was successful.
+# Compile of contatoreX.vhd was successful.
+# Compile of FF.vhd was successful.
+# Compile of tbDec3to8.vhd was successful.
+# Compile of n_bit_register.vhd was successful.
+# Compile of tbFF.vhd was successful.
+# Compile of Dec3to8.vhd was successful.
+# Compile of tb_rx_core.vhd was successful.
+# Compile of tb_flip_flop.vhd was successful.
+# Compile of gen_mux_2_1.vhd was successful.
+# Compile of mux_2_1.vhd was successful.
+# 58 compiles, 0 failed with no errors.
+vsim -gui -t 10ps work.tb_uart
+# vsim -gui -t 10ps work.tb_uart 
+# Start time: 22:55:40 on Feb 02,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_uart(behavioral)
+# Loading work.uart(behavior)
+# Loading ieee.numeric_std(body)
+# Loading work.tx_dp_cu(beh)
+# Loading work.blocco_txd(beh)
+# Loading work.shift_register_piso_8bit(beh)
+# Loading work.sr_ff(behavioral)
+# Loading work.counter_2_tc(beh)
+# Loading work.contatorex(beh)
+# Loading work.terminal_count_analyzer(beh)
+# Loading work.counter_with_tc(beh)
+# Loading work.rx_unit(beh)
+# Loading work.cu_rx(beh)
+# Loading work.rx_core(beh)
+# Loading work.rx_shift_register(beh)
+# Loading work.rx_flip_flop(beh)
+# Loading work.rx_recognize_start(beh)
+# Loading work.rx_recognize_value(beh)
+# Loading work.rx_mux2to1(beh)
+# Loading work.rx_counter_with_tc(beh)
+# Loading work.rx_contatore(beh)
+# Loading work.rx_terminal_count_analyzer(beh)
+# Loading work.rx_counter_2_tc(beh)
+# Loading work.businterface(behavioral)
+# Loading work.gen_mux_2_1(beh)
+# Loading work.mux_2_1(beh)
+# Loading work.changedetector(behavioral)
+# Loading work.ff(beh)
+# Loading work.n_bit_register(beh)
+# Loading work.dec3to8(behavior)
+add add -r /*
+# ** Error: bad option "add": should be one of...
+#   add atv ?options? ?arg arg ...?
+#   add button text action ?disable? ?options? ?help?
+#   add dataflow ?options? ?arg arg ...?
+#   add lists ?options? ?arg arg ...?
+#   add log ?options? ?arg arg ...?
+#   add memory options ?arg arg ...?
+#   add message ?options? ?arg arg ...?
+#   add monitor ?options? ?arg arg ...?
+#   add schematic ?options? ?arg arg ...?
+#   add testbrowser ?options? ?arg arg ...?
+#   add virtual ?options? ?arg arg ...?
+#   add watch ?options? ?arg arg ...?
+#   add wave ?options? ?arg arg ...?
+add wave -r /*
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_uart/DUT/RX/UUT/CNT_TIME_NOP/TC_ANALYZER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_uart/DUT/RX/UUT/CNT_SAMPLES/TC_ANALYZER_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_uart/DUT/RX/UUT/CNT_SAMPLES/TC_ANALYZER_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_uart/DUT/RX/UUT/COUNTER_SYMBOLS/TC_ANALYZER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_uart/DUT/RX/UUT/COUNTER_TIME_SAMPLES/TC_ANALYZER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_uart/DUT/TX/COUNTER1TC/TC_ANALYZER
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_uart/DUT/TX/COUNTER2TC/TC_ANALYZER_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_uart/DUT/TX/COUNTER2TC/TC_ANALYZER_1
+run
+quit -sim
+# End time: 22:56:45 on Feb 02,2021, Elapsed time: 0:01:05
+# Errors: 0, Warnings: 10

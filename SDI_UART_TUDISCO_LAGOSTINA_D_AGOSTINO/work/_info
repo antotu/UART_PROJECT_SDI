@@ -1,0 +1,2400 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/loren/OneDrive/Desktop/FileFinali-20210129T180306Z-001/FileFinali
+Eblocco_txd
+Z0 w1608408883
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 130
+Z3 dC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL
+Z4 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/blocco_txd.vhd
+Z5 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/blocco_txd.vhd
+l0
+L4 1
+VRJK;>PXBli>FVSO0``lLe1
+!s100 @^C`P3fUD0=3j:gnfiYS00
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1612302903
+!i10b 1
+Z8 !s108 1612302903.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/blocco_txd.vhd|
+Z10 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/blocco_txd.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Abeh
+R1
+R2
+DEx4 work 10 blocco_txd 0 22 RJK;>PXBli>FVSO0``lLe1
+!i122 130
+l40
+L21 34
+VGDBhJ4m>M7?>04R1D5Wl:1
+!s100 gKL4=9ih<Z>R><FXVOcA33
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ebusinterface
+Z13 w1612202862
+R1
+R2
+!i122 119
+R3
+Z14 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/BusInterface.vhd
+Z15 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/BusInterface.vhd
+l0
+L4 1
+VLjBo0nX?g0gD=;W8[mOF70
+!s100 YUo`>cf>C]7L`kWa2lQ[V1
+R6
+32
+Z16 !s110 1612302901
+!i10b 1
+Z17 !s108 1612302901.000000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/BusInterface.vhd|
+Z19 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/BusInterface.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R1
+R2
+DEx4 work 12 businterface 0 22 LjBo0nX?g0gD=;W8[mOF70
+!i122 119
+l72
+L23 238
+VUb31DLcXJ6fPHX31RVYBz2
+!s100 DhfMjbP<l:B^OK:>S8fEb1
+R6
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12
+Echangedetector
+Z20 w1608239116
+R1
+R2
+!i122 133
+R3
+Z21 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/changeDetector.vhd
+Z22 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/changeDetector.vhd
+l0
+L4 1
+V=h`C0i>>GYTGW0X4ziU:g1
+!s100 QHLYoh6aX]0kVH`Smd`Oo0
+R6
+32
+Z23 !s110 1612302904
+!i10b 1
+Z24 !s108 1612302904.000000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/changeDetector.vhd|
+Z26 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/changeDetector.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R1
+R2
+DEx4 work 14 changedetector 0 22 =h`C0i>>GYTGW0X4ziU:g1
+!i122 133
+l21
+L10 17
+VDSlFH@MNK_`8078CYg<l12
+!s100 bWo:l8m[UZVUY<;cCdYSn2
+R6
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R11
+R12
+Econtatorex
+Z27 w1607450004
+Z28 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R1
+R2
+!i122 164
+R3
+Z29 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/contatoreX.vhd
+Z30 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/contatoreX.vhd
+l0
+L5 1
+V1D_hX<`PK5j:IA<P=m1Z^1
+!s100 EjJIEdXK<3jA8`k<zJGSh0
+R6
+32
+Z31 !s110 1612302910
+!i10b 1
+Z32 !s108 1612302910.000000
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/contatoreX.vhd|
+Z34 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/contatoreX.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 10 contatorex 0 22 1D_hX<`PK5j:IA<P=m1Z^1
+!i122 164
+l16
+Z35 L15 15
+V>ZTHMVLV]cTMd>ThdVR2Q0
+!s100 _1WomodIW33Vz981bV=U12
+R6
+32
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R11
+R12
+Ecounter_2_tc
+Z36 w1607463265
+R28
+R1
+R2
+!i122 161
+R3
+Z37 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/counter_2_tc.vhd
+Z38 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/counter_2_tc.vhd
+l0
+L6 1
+VaWDO=60YF<5YXRi?TB0Ym0
+!s100 do;GXFz]E^POW8R=T_zCG2
+R6
+32
+Z39 !s110 1612302909
+!i10b 1
+Z40 !s108 1612302909.000000
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/counter_2_tc.vhd|
+Z42 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/counter_2_tc.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 12 counter_2_tc 0 22 aWDO=60YF<5YXRi?TB0Ym0
+!i122 161
+l47
+Z43 L19 54
+VZ_RASMdK]Q<l:5@k8::083
+!s100 5=zZ=87>^]cijc3VINU0@2
+R6
+32
+R39
+!i10b 1
+R40
+R41
+R42
+!i113 1
+R11
+R12
+Ecounter_with_tc
+Z44 w1607463172
+R28
+R1
+R2
+!i122 162
+R3
+Z45 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/counter_with_tc.vhd
+Z46 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/counter_with_tc.vhd
+l0
+L5 1
+VSP87G>Y8ML>Y4WlR3`V@N0
+!s100 2mOzcPYjCmbG`AgNdPDiz0
+R6
+32
+R39
+!i10b 1
+R40
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/counter_with_tc.vhd|
+Z48 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/counter_with_tc.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 15 counter_with_tc 0 22 SP87G>Y8ML>Y4WlR3`V@N0
+!i122 162
+l43
+Z49 L16 46
+V[ghmF8liWW6aj5cf0^Jeg2
+!s100 bQJV2cRVzR9moiEd;3I;82
+R6
+32
+R39
+!i10b 1
+R40
+R47
+R48
+!i113 1
+R11
+R12
+Ecu_rx
+Z50 w1610729987
+R1
+R2
+!i122 124
+R3
+Z51 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/CU_RX.vhd
+Z52 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/CU_RX.vhd
+l0
+L5 1
+VMMGKN4Ao0[:^:^o06oT`o0
+!s100 `W>_ej?W4ocdINJ0O[bLd1
+R6
+32
+Z53 !s110 1612302902
+!i10b 1
+Z54 !s108 1612302902.000000
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/CU_RX.vhd|
+Z56 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/CU_RX.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+DEx4 work 5 cu_rx 0 22 MMGKN4Ao0[:^:^o06oT`o0
+!i122 124
+l54
+L44 282
+V2^f:7_:7z;70A]P7O3hP?2
+!s100 NO=;oJ5=hU<eBS6:?AVXH2
+R6
+32
+R53
+!i10b 1
+R54
+R55
+R56
+!i113 1
+R11
+R12
+Edec3to8
+Z57 w1607359334
+R1
+R2
+!i122 169
+R3
+Z58 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/Dec3to8.vhd
+Z59 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/Dec3to8.vhd
+l0
+L4 1
+VTg[kTj=g``3>V_;@LfM@Z0
+!s100 Sg3@8`dG=]=8[iV6gMa0I1
+R6
+32
+Z60 !s110 1612302911
+!i10b 1
+Z61 !s108 1612302911.000000
+Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/Dec3to8.vhd|
+Z63 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/Dec3to8.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R1
+R2
+DEx4 work 7 dec3to8 0 22 Tg[kTj=g``3>V_;@LfM@Z0
+!i122 169
+l12
+L10 16
+V@]B3Qc;=104Z<X[]^bb^J2
+!s100 c><NGKDmz9d<QdKQR]@Vd1
+R6
+32
+R60
+!i10b 1
+R61
+R62
+R63
+!i113 1
+R11
+R12
+Eff
+Z64 w1607367552
+R1
+R2
+!i122 165
+R3
+Z65 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/FF.vhd
+Z66 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/FF.vhd
+l0
+L4 1
+V1lK4VUl`5^0FVjF6LD[[R2
+!s100 E0DlRLm9]K6S>end4]KP;1
+R6
+32
+R31
+!i10b 1
+R32
+Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/FF.vhd|
+Z68 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/FF.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+DEx4 work 2 ff 0 22 1lK4VUl`5^0FVjF6LD[[R2
+!i122 165
+l12
+L10 22
+VOFS`=mgWGi0eKk8kLb>DF1
+!s100 I72kHXm>NZOHkb4bciW@@3
+R6
+32
+R31
+!i10b 1
+R32
+R67
+R68
+!i113 1
+R11
+R12
+Eflip_flop
+Z69 w1607483408
+R1
+R2
+!i122 158
+R3
+Z70 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/flip_flop.vhd
+Z71 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/flip_flop.vhd
+l0
+L5 1
+VkeM3oESn4kFU[8Y`ZC^mn1
+!s100 8T4CDm7milk@]cmgY<6Ke0
+R6
+32
+R39
+!i10b 1
+R40
+Z72 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/flip_flop.vhd|
+Z73 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/flip_flop.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+DEx4 work 9 flip_flop 0 22 keM3oESn4kFU[8Y`ZC^mn1
+!i122 158
+l17
+L16 17
+VSUNoQK5JZg:9Een2B7c_?0
+!s100 5niLLnL:QWSXE?49DfB8L3
+R6
+32
+R39
+!i10b 1
+R40
+R72
+R73
+!i113 1
+R11
+R12
+Egen_mux_2_1
+Z74 w1612302899
+R28
+R1
+R2
+!i122 172
+R3
+Z75 8C:\Users\loren\Desktop\Elle\Quarto_Anno\SDI\UART\FINAL\gen_mux_2_1.vhd
+Z76 FC:\Users\loren\Desktop\Elle\Quarto_Anno\SDI\UART\FINAL\gen_mux_2_1.vhd
+l0
+L5 1
+Vd<EfTbb=<H=o;eRPdg7BC1
+!s100 <=mf?1@JLk;S6Ih?:L<e]0
+R6
+32
+R60
+!i10b 1
+R61
+Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\loren\Desktop\Elle\Quarto_Anno\SDI\UART\FINAL\gen_mux_2_1.vhd|
+Z78 !s107 C:\Users\loren\Desktop\Elle\Quarto_Anno\SDI\UART\FINAL\gen_mux_2_1.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 11 gen_mux_2_1 0 22 d<EfTbb=<H=o;eRPdg7BC1
+!i122 172
+l19
+L12 15
+V4KWi;QA<6gNJjf17kXOl?1
+!s100 G`on;gA];27eZlcBzR2aF3
+R6
+32
+R60
+!i10b 1
+R61
+R77
+R78
+!i113 1
+R11
+R12
+Emux_2_1
+Z79 w1584723461
+R1
+R2
+!i122 173
+R3
+Z80 8C:\Users\loren\Desktop\Elle\Quarto_Anno\SDI\UART\FINAL\mux_2_1.vhd
+Z81 FC:\Users\loren\Desktop\Elle\Quarto_Anno\SDI\UART\FINAL\mux_2_1.vhd
+l0
+L4 1
+V[0;oU44Ig?W[Wa=[_e];C3
+!s100 3APU0L4gd0kR0N?CG5lE>0
+R6
+32
+Z82 !s110 1612302912
+!i10b 1
+R61
+Z83 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\loren\Desktop\Elle\Quarto_Anno\SDI\UART\FINAL\mux_2_1.vhd|
+Z84 !s107 C:\Users\loren\Desktop\Elle\Quarto_Anno\SDI\UART\FINAL\mux_2_1.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+Z85 DEx4 work 7 mux_2_1 0 22 [0;oU44Ig?W[Wa=[_e];C3
+!i122 173
+l12
+L9 7
+Z86 V:Sl@fP;b73VPl:`7E[Q323
+Z87 !s100 1abn0191a]JmiEX=0WW=@0
+R6
+32
+R82
+!i10b 1
+R61
+R83
+R84
+!i113 1
+R11
+R12
+En_bit_register
+Z88 w1607367530
+R28
+R1
+R2
+!i122 167
+R3
+Z89 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/n_bit_register.vhd
+Z90 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/n_bit_register.vhd
+l0
+L5 1
+V^^5MKl37B2>?;MWA2]m?m2
+!s100 7=bbFVCGWNFK[[Tf5MESl1
+R6
+32
+R31
+!i10b 1
+R32
+Z91 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/n_bit_register.vhd|
+Z92 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/n_bit_register.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 14 n_bit_register 0 22 ^^5MKl37B2>?;MWA2]m?m2
+!i122 167
+l14
+L12 22
+V[@Zf`?P?IN;8h8Bh7lMiT2
+!s100 ABL2HdVUF?9AJ<bnTmUOK1
+R6
+32
+R31
+!i10b 1
+R32
+R91
+R92
+!i113 1
+R11
+R12
+Erx_contatore
+Z93 w1607509165
+R28
+R1
+R2
+!i122 157
+R3
+Z94 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_contatore.vhd
+Z95 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_contatore.vhd
+l0
+L5 1
+V<8QE9l0;?f@jVJVUMZF6U0
+!s100 h54nWeK3TB^KO0AWU[Gc83
+R6
+32
+Z96 !s110 1612302908
+!i10b 1
+Z97 !s108 1612302908.000000
+Z98 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_contatore.vhd|
+Z99 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_contatore.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 12 rx_contatore 0 22 <8QE9l0;?f@jVJVUMZF6U0
+!i122 157
+l16
+R35
+Vj4[_b2WW:Kd8?@Koz^Y9H0
+!s100 1J:`1ZIGYRljLk`7TNm]00
+R6
+32
+R96
+!i10b 1
+R97
+R98
+R99
+!i113 1
+R11
+R12
+Erx_core
+Z100 w1610993492
+R1
+R2
+!i122 121
+R3
+Z101 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_core.vhd
+Z102 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_core.vhd
+l0
+L4 1
+VSdmgJ:oN>Vj63cn[LRghi3
+!s100 Qo95_b5OTf4zb]bGDeBd61
+R6
+32
+R53
+!i10b 1
+R54
+Z103 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_core.vhd|
+Z104 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_core.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+DEx4 work 7 rx_core 0 22 SdmgJ:oN>Vj63cn[LRghi3
+!i122 121
+l162
+L69 222
+VT?]mQ2PB_NG7Pf`:DS]042
+!s100 bM:XhWN5Gc4RBoBbP^nPL1
+R6
+32
+R53
+!i10b 1
+R54
+R103
+R104
+!i113 1
+R11
+R12
+Erx_counter_2_tc
+Z105 w1607509234
+R28
+R1
+R2
+!i122 156
+R3
+Z106 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_counter_2_tc.vhd
+Z107 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_counter_2_tc.vhd
+l0
+L6 1
+VB07G3[I9a34[JIzUai1`Q1
+!s100 XiYA;zn>YBL@?9`cNCajb3
+R6
+32
+R96
+!i10b 1
+R97
+Z108 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_counter_2_tc.vhd|
+Z109 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_counter_2_tc.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 15 rx_counter_2_tc 0 22 B07G3[I9a34[JIzUai1`Q1
+!i122 156
+l47
+R43
+VQT4jaTneVB6bFnoBRg8>E1
+!s100 GI5`@2YRYbdGGRO9bHVbQ2
+R6
+32
+R96
+!i10b 1
+R97
+R108
+R109
+!i113 1
+R11
+R12
+Erx_counter_with_tc
+Z110 w1607509304
+R28
+R1
+R2
+!i122 155
+R3
+Z111 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_counter_with_tc.vhd
+Z112 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_counter_with_tc.vhd
+l0
+L5 1
+VV?oGU:9PDZ<Ee1cQ;9:M90
+!s100 QzO6hBA:cEW@PP6>A]akL1
+R6
+32
+R96
+!i10b 1
+R97
+Z113 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_counter_with_tc.vhd|
+Z114 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_counter_with_tc.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 18 rx_counter_with_tc 0 22 V?oGU:9PDZ<Ee1cQ;9:M90
+!i122 155
+l43
+R49
+VbVc7zWB^9W5dA5nE9<K6?1
+!s100 [DlM6hWPXnN2ckdaKTC4[2
+R6
+32
+R96
+!i10b 1
+R97
+R113
+R114
+!i113 1
+R11
+R12
+Erx_flip_flop
+Z115 w1607509345
+R1
+R2
+!i122 154
+R3
+Z116 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_flip_flop.vhd
+Z117 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_flip_flop.vhd
+l0
+L4 1
+V^:SS0EN7QKC7N]L8R@h6d0
+!s100 Y[E^YTVCi>HAbY_bnk6?k3
+R6
+32
+R96
+!i10b 1
+R97
+Z118 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_flip_flop.vhd|
+Z119 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_flip_flop.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+DEx4 work 12 rx_flip_flop 0 22 ^:SS0EN7QKC7N]L8R@h6d0
+!i122 154
+l15
+L14 15
+V[fjY1n;P=<>l=56Vza=Te3
+!s100 89W4U[`6PiPW`NK`O`3^f2
+R6
+32
+R96
+!i10b 1
+R97
+R118
+R119
+!i113 1
+R11
+R12
+Erx_mux2to1
+Z120 w1607509386
+R1
+R2
+!i122 153
+R3
+Z121 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_mux2to1.vhd
+Z122 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_mux2to1.vhd
+l0
+L4 1
+VL<l93o1ia5DA4]WJ35o]=3
+!s100 i;X7W98ST5@YD466l=TOH2
+R6
+32
+R96
+!i10b 1
+R97
+Z123 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_mux2to1.vhd|
+Z124 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_mux2to1.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+DEx4 work 10 rx_mux2to1 0 22 L<l93o1ia5DA4]WJ35o]=3
+!i122 153
+l15
+Z125 L13 7
+V2<UT;kn9IoFDC]^jM]NA^0
+!s100 TnD:[z_ZKW0aoTV[Abah40
+R6
+32
+R96
+!i10b 1
+R97
+R123
+R124
+!i113 1
+R11
+R12
+Erx_recognize_start
+Z126 w1607509433
+R1
+R2
+!i122 152
+R3
+Z127 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_recognize_start.vhd
+Z128 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_recognize_start.vhd
+l0
+L4 1
+VEmo]P0zSEnW:^2^?B;^KZ2
+!s100 lHUQi[=]2b?SO@`^1z5Rj0
+R6
+32
+R96
+!i10b 1
+Z129 !s108 1612302907.000000
+Z130 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_recognize_start.vhd|
+Z131 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_recognize_start.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+DEx4 work 18 rx_recognize_start 0 22 Emo]P0zSEnW:^2^?B;^KZ2
+!i122 152
+l15
+L12 12
+VBg>4:bQc^8a=eUQiW;Q@>3
+!s100 MfR=TBPOC1U>:nl5[0WWE1
+R6
+32
+R96
+!i10b 1
+R129
+R130
+R131
+!i113 1
+R11
+R12
+Erx_recognize_value
+Z132 w1607509466
+R1
+R2
+!i122 151
+R3
+Z133 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_recognize_value.vhd
+Z134 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_recognize_value.vhd
+l0
+L5 1
+VTTAGATANP8@WJ<MhDA2c_1
+!s100 9NF1P2lWAZQ<ed`L@6gcD3
+R6
+32
+Z135 !s110 1612302907
+!i10b 1
+R129
+Z136 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_recognize_value.vhd|
+Z137 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_recognize_value.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+DEx4 work 18 rx_recognize_value 0 22 TTAGATANP8@WJ<MhDA2c_1
+!i122 151
+l15
+R125
+Vafe0XN7EeD2cDbVoP4_473
+!s100 K5M`@5dFG``jd8C0<@zO]3
+R6
+32
+R135
+!i10b 1
+R129
+R136
+R137
+!i113 1
+R11
+R12
+Erx_shift_register
+Z138 w1607875268
+R1
+R2
+!i122 136
+R3
+Z139 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_SHIFT_REGISTER.vhd
+Z140 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_SHIFT_REGISTER.vhd
+l0
+L4 1
+VV:L_lh<F`3Tao7W1`f:cO0
+!s100 NKBZezIZ;gzcaKUmIZ9[T0
+R6
+32
+R23
+!i10b 1
+R24
+Z141 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_SHIFT_REGISTER.vhd|
+Z142 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_SHIFT_REGISTER.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+DEx4 work 17 rx_shift_register 0 22 V:L_lh<F`3Tao7W1`f:cO0
+!i122 136
+l34
+L24 26
+VMYlbKIYUlg122g2O7k;c=3
+!s100 ;_8^4]E7g]?>g5iB`mQMa0
+R6
+32
+R23
+!i10b 1
+R24
+R141
+R142
+!i113 1
+R11
+R12
+Erx_terminal_count_analyzer
+Z143 w1607517670
+R28
+R1
+R2
+!i122 138
+R3
+Z144 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_terminal_count_analyzer.vhd
+Z145 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_terminal_count_analyzer.vhd
+l0
+L5 1
+Vzj@eJJP9[gbUJ@Ic61DDg2
+!s100 3;SFZZ_B826?:;^lM1CZV1
+R6
+32
+Z146 !s110 1612302905
+!i10b 1
+Z147 !s108 1612302905.000000
+Z148 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_terminal_count_analyzer.vhd|
+Z149 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/RX_terminal_count_analyzer.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 26 rx_terminal_count_analyzer 0 22 zj@eJJP9[gbUJ@Ic61DDg2
+!i122 138
+l16
+Z150 L14 12
+VgL9[22IRiOH@ZPhBC7CSF0
+!s100 dBZl5aVd0OEeWi;[IU11W1
+R6
+32
+R146
+!i10b 1
+R147
+R148
+R149
+!i113 1
+R11
+R12
+Erx_unit
+Z151 w1610716472
+R1
+R2
+!i122 127
+R3
+Z152 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_unit.vhd
+Z153 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_unit.vhd
+l0
+L4 1
+VRN`VHQ?;B<Mcg1BY2dG^b1
+!s100 oJEbIU@i[YZJ590AkBBCN0
+R6
+32
+R7
+!i10b 1
+R8
+Z154 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_unit.vhd|
+Z155 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/rx_unit.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+DEx4 work 7 rx_unit 0 22 RN`VHQ?;B<Mcg1BY2dG^b1
+!i122 127
+l155
+L17 220
+VPA=QX]AcX?Xo]nVII<O?S3
+!s100 i]7g@39Q_C2m?^Q;DU^A41
+R6
+32
+R7
+!i10b 1
+R8
+R154
+R155
+!i113 1
+R11
+R12
+Eshift_register_piso_8bit
+Z156 w1608408801
+R1
+R2
+!i122 131
+R3
+Z157 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/shift_register_piso_8bit.vhd
+Z158 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/shift_register_piso_8bit.vhd
+l0
+L5 1
+VEIPk2bZI6UG=j;VkRWNI72
+!s100 E7hGAoTKiHk2`68O9G7nb2
+R6
+32
+R23
+!i10b 1
+R8
+Z159 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/shift_register_piso_8bit.vhd|
+Z160 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/shift_register_piso_8bit.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+DEx4 work 24 shift_register_piso_8bit 0 22 EIPk2bZI6UG=j;VkRWNI72
+!i122 131
+l20
+L17 30
+VPf23Z2;MYB5nda28cH[GI0
+!s100 CIgfl2>0?5f[EFi_423I^1
+R6
+32
+R23
+!i10b 1
+R8
+R159
+R160
+!i113 1
+R11
+R12
+Esr_ff
+Z161 w1610717176
+R1
+R2
+!i122 126
+R3
+Z162 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/SR_FF.vhd
+Z163 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/SR_FF.vhd
+l0
+L4 1
+V0Zb6GZEV7GLEhKd7TnZzV3
+!s100 bADb6ib6^l?ho==EhRYO13
+R6
+32
+R7
+!i10b 1
+R54
+Z164 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/SR_FF.vhd|
+Z165 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/SR_FF.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R1
+R2
+DEx4 work 5 sr_ff 0 22 0Zb6GZEV7GLEhKd7TnZzV3
+!i122 126
+l12
+L10 30
+V=oPP>8SDT1DPBmg;d:lz91
+!s100 OlO@;]OS;1HMz5aD76OcU1
+R6
+32
+R7
+!i10b 1
+R54
+R164
+R165
+!i113 1
+R11
+R12
+Etb_blocco_txd
+Z166 w1608400171
+R1
+R2
+!i122 132
+R3
+Z167 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_blocco_txd.vhd
+Z168 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_blocco_txd.vhd
+l0
+L4 1
+VGR<oY1Yj8z[6GW]R[7J2J3
+!s100 1m;bCjMC7QM_h>gGL;bB<1
+R6
+32
+R23
+!i10b 1
+R24
+Z169 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_blocco_txd.vhd|
+Z170 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_blocco_txd.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+DEx4 work 13 tb_blocco_txd 0 22 GR<oY1Yj8z[6GW]R[7J2J3
+!i122 132
+l33
+L7 101
+Vkci:N7ab=ZeelVZ?RfLRm3
+!s100 NU8i?=h=nTE]USA?T_DP:0
+R6
+32
+R23
+!i10b 1
+R24
+R169
+R170
+!i113 1
+R11
+R12
+Etb_contatorex
+Z171 w1607513966
+R2
+R1
+R28
+!i122 145
+R3
+Z172 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_contatoreX.vhd
+Z173 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_contatoreX.vhd
+l0
+L4 1
+VQRmoWV8TTTa>XWRM0748=3
+!s100 oYoFb9CeeFHUkj>G8E]@91
+R6
+32
+Z174 !s110 1612302906
+!i10b 1
+Z175 !s108 1612302906.000000
+Z176 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_contatoreX.vhd|
+Z177 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_contatoreX.vhd|
+!i113 1
+R11
+R12
+Abeh
+R2
+R1
+R28
+DEx4 work 13 tb_contatorex 0 22 QRmoWV8TTTa>XWRM0748=3
+!i122 145
+l25
+Z178 L7 51
+VjBO[k4eSTIlOiYSNM4Rig1
+!s100 ;2cAX<Ze7kn;4>2Gb3G9f3
+R6
+32
+R174
+!i10b 1
+R175
+R176
+R177
+!i113 1
+R11
+R12
+Etb_counter_2_tc
+Z179 w1607513310
+R28
+R1
+R2
+!i122 146
+R3
+Z180 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_counter_2_tc.vhd
+Z181 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_counter_2_tc.vhd
+l0
+L5 1
+VM;m^_IHjleE?<j[l9Hcml0
+!s100 5`]QNE^jNVcEWDO<SS5MR3
+R6
+32
+R174
+!i10b 1
+R175
+Z182 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_counter_2_tc.vhd|
+Z183 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_counter_2_tc.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 15 tb_counter_2_tc 0 22 M;m^_IHjleE?<j[l9Hcml0
+!i122 146
+l33
+L8 61
+VJimNLW5b9R<=D=m;L=4YK2
+!s100 TUk^3@i73Xz<6ldnG_C9;3
+R6
+32
+R174
+!i10b 1
+R175
+R182
+R183
+!i113 1
+R11
+R12
+Etb_counter_with_tc
+Z184 w1607514416
+R28
+R1
+R2
+!i122 144
+R3
+Z185 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_counter_with_tc.vhd
+Z186 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_counter_with_tc.vhd
+l0
+L5 1
+VY58I?f[YTNj7hJYc:Edz?3
+!s100 n;SU[R;P]X]KoJnSFn^iR3
+R6
+32
+R174
+!i10b 1
+R175
+Z187 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_counter_with_tc.vhd|
+Z188 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_counter_with_tc.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 18 tb_counter_with_tc 0 22 Y58I?f[YTNj7hJYc:Edz?3
+!i122 144
+l29
+Z189 L8 55
+VJK1U<NdNKz8Fee<YH9Ll71
+!s100 12Ug5GoWCcBD2Cj8^nf0f1
+R6
+32
+R174
+!i10b 1
+R175
+R187
+R188
+!i113 1
+R11
+R12
+Etb_cu_rx
+Z190 w1607461321
+R28
+R1
+R2
+!i122 163
+R3
+Z191 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_CU_RX.vhd
+Z192 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_CU_RX.vhd
+l0
+L5 1
+V]czOEBVcIVi;JW[f3a<gm1
+!s100 _6ZjZ52z_5TKl4QTZ]3^>0
+R6
+32
+R31
+!i10b 1
+R32
+Z193 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_CU_RX.vhd|
+Z194 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_CU_RX.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 8 tb_cu_rx 0 22 ]czOEBVcIVi;JW[f3a<gm1
+!i122 163
+l77
+L9 211
+V^f7?U>Ujz47K=b[dZ?nEX2
+!s100 VnM`8Wz:]ol[9kDRO>^FI2
+R6
+32
+R31
+!i10b 1
+R32
+R193
+R194
+!i113 1
+R11
+R12
+Etb_datapath
+Z195 w1607473796
+R28
+R1
+R2
+!i122 159
+R3
+Z196 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_datapath.vhd
+Z197 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_datapath.vhd
+l0
+L5 1
+V]?Nc;bH@6>B3oQ^0D;Fe70
+!s100 2n5_NDo8NNE>J=>5JB6d?2
+R6
+32
+R39
+!i10b 1
+R40
+Z198 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_datapath.vhd|
+Z199 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_datapath.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 11 tb_datapath 0 22 ]?Nc;bH@6>B3oQ^0D;Fe70
+!i122 159
+l30
+L8 53
+VM4;R^HW]3DP:S9lObMB7R1
+!s100 S=2<Uh2IEbeL11?en50363
+R6
+32
+R39
+!i10b 1
+R40
+R198
+R199
+!i113 1
+R11
+R12
+Etb_flip_flop
+Z200 w1607241820
+R1
+R2
+!i122 171
+R3
+Z201 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_flip_flop.vhd
+Z202 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_flip_flop.vhd
+l0
+L5 1
+V9Nb>GRzHgC]W>H]TBnQkM0
+!s100 hPOK9KRl7zUAEAZg6gk5a2
+R6
+32
+R60
+!i10b 1
+R61
+Z203 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_flip_flop.vhd|
+Z204 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_flip_flop.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+DEx4 work 12 tb_flip_flop 0 22 9Nb>GRzHgC]W>H]TBnQkM0
+!i122 171
+l26
+L8 54
+VM8F=M`>81B1DF;QJXOH;m3
+!s100 j]jCjmN[U1zM`E<aK@Ub11
+R6
+32
+R60
+!i10b 1
+R61
+R203
+R204
+!i113 1
+R11
+R12
+Etb_rx_contatore
+Z205 w1607509622
+R2
+R1
+R28
+!i122 150
+R3
+Z206 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_contatore.vhd
+Z207 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_contatore.vhd
+l0
+L4 1
+V?nkQ1[d3>3fh02MacUn[o3
+!s100 ODzooU@jN7=4[z0kfcm[g1
+R6
+32
+R135
+!i10b 1
+R129
+Z208 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_contatore.vhd|
+Z209 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_contatore.vhd|
+!i113 1
+R11
+R12
+Abeh
+R2
+R1
+R28
+DEx4 work 15 tb_rx_contatore 0 22 ?nkQ1[d3>3fh02MacUn[o3
+!i122 150
+l25
+R178
+VbYSIiI8zabFzCoLa6f`?L2
+!s100 ^m=i`34DLR?o]1`6NfcP_2
+R6
+32
+R135
+!i10b 1
+R129
+R208
+R209
+!i113 1
+R11
+R12
+Etb_rx_core
+Z210 w1607353916
+R28
+R1
+R2
+!i122 170
+R3
+Z211 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_rx_core.vhd
+Z212 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_rx_core.vhd
+l0
+L6 1
+VO7^768S_`J^<AlS3IM;?z1
+!s100 To]L9eTe1`fTdRko_Som@1
+R6
+32
+R60
+!i10b 1
+R61
+Z213 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_rx_core.vhd|
+Z214 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_rx_core.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 10 tb_rx_core 0 22 O7^768S_`J^<AlS3IM;?z1
+!i122 170
+l112
+L9 364
+VN<c3L:[:HJGQ2AaMmgN<C0
+!s100 _AZZKlHe<oehm9UCKbDGN1
+R6
+32
+R60
+!i10b 1
+R61
+R213
+R214
+!i113 1
+R11
+R12
+Etb_rx_counter_2_tc
+Z215 w1607509685
+R1
+R2
+!i122 149
+R3
+Z216 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_counter_2_tc.vhd
+Z217 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_counter_2_tc.vhd
+l0
+L5 1
+VA2_UknaAI32^m34@J5Dk52
+!s100 gZO3YU`kAM@d2YknA9Yd_3
+R6
+32
+R135
+!i10b 1
+R129
+Z218 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_counter_2_tc.vhd|
+Z219 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_counter_2_tc.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+DEx4 work 18 tb_rx_counter_2_tc 0 22 A2_UknaAI32^m34@J5Dk52
+!i122 149
+l33
+L9 58
+V4:bWbE6VizEnPOnYbW@=B1
+!s100 dg19IQJ9kNbm?B5;;^TFQ1
+R6
+32
+R135
+!i10b 1
+R129
+R218
+R219
+!i113 1
+R11
+R12
+Etb_rx_counter_with_tc
+Z220 w1607509870
+R1
+R2
+!i122 148
+R3
+Z221 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_counter_with_tc.vhd
+Z222 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_counter_with_tc.vhd
+l0
+L4 1
+V8ZTL>gC::iETddON;H:Q=1
+!s100 R_>>QH8N>nQRbQ=KR_SW<0
+R6
+32
+R135
+!i10b 1
+R129
+Z223 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_counter_with_tc.vhd|
+Z224 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_counter_with_tc.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+DEx4 work 21 tb_rx_counter_with_tc 0 22 8ZTL>gC::iETddON;H:Q=1
+!i122 148
+l28
+L8 52
+V_:Idcaj?DIE@cb95F96ZW1
+!s100 QdRCQAgnO?0STCYWGFj_Q0
+R6
+32
+R135
+!i10b 1
+R129
+R223
+R224
+!i113 1
+R11
+R12
+Etb_rx_flip_flop
+Z225 w1607517341
+R1
+R2
+!i122 143
+R3
+Z226 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_flip_flop.vhd
+Z227 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_flip_flop.vhd
+l0
+L4 1
+V@TBHdj`i5oHQ0KSbMzJa<2
+!s100 fK@T;?zDTDjz=`J?kC[i[0
+R6
+32
+R174
+!i10b 1
+R175
+Z228 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_flip_flop.vhd|
+Z229 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_flip_flop.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+DEx4 work 15 tb_rx_flip_flop 0 22 @TBHdj`i5oHQ0KSbMzJa<2
+!i122 143
+l25
+L7 52
+VUK17Bln3Gb;k3`a[Wme_=2
+!s100 V^i[0ffXHQi<5=MFJDQW;0
+R6
+32
+R174
+!i10b 1
+R175
+R228
+R229
+!i113 1
+R11
+R12
+Etb_rx_mux2to1
+Z230 w1607517387
+R28
+R1
+R2
+!i122 142
+R3
+Z231 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_mux2to1.vhd
+Z232 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_mux2to1.vhd
+l0
+L5 1
+Vm9;98b<jU;0j4D0QJgzJ10
+!s100 5czIlUXk1nnJ?zko7?X8B0
+R6
+32
+R174
+!i10b 1
+R147
+Z233 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_mux2to1.vhd|
+Z234 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_mux2to1.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 13 tb_rx_mux2to1 0 22 m9;98b<jU;0j4D0QJgzJ10
+!i122 142
+l26
+L9 39
+VRJZ<WzA@RXPjgcfjm9Iez3
+!s100 HlQ3H52HmfGOdLK7O0Q2f2
+R6
+32
+R174
+!i10b 1
+R147
+R233
+R234
+!i113 1
+R11
+R12
+Etb_rx_recognize_start
+Z235 w1607517436
+R28
+R1
+R2
+!i122 141
+R3
+Z236 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_recognize_start.vhd
+Z237 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_recognize_start.vhd
+l0
+L5 1
+VQcni58PjbzDUd5?1I_noG0
+!s100 ^czC`JKHNEC:5D^CQoCJ[1
+R6
+32
+R146
+!i10b 1
+R147
+Z238 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_recognize_start.vhd|
+Z239 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_recognize_start.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 21 tb_rx_recognize_start 0 22 Qcni58PjbzDUd5?1I_noG0
+!i122 141
+l22
+Z240 L9 30
+VQeaiaKR656WGFHP:ZKiFC3
+!s100 GnT1L1CB?EF6:0FnXMZR13
+R6
+32
+R146
+!i10b 1
+R147
+R238
+R239
+!i113 1
+R11
+R12
+Etb_rx_recognize_value
+Z241 w1607517480
+R28
+R1
+R2
+!i122 140
+R3
+Z242 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_recognize_value.vhd
+Z243 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_recognize_value.vhd
+l0
+L5 1
+VEC<Jhg>o=d;TAPT7]@g422
+!s100 3;2fKCfe?>8Ke_]?^R1eg2
+R6
+32
+R146
+!i10b 1
+R147
+Z244 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_recognize_value.vhd|
+Z245 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_recognize_value.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 21 tb_rx_recognize_value 0 22 EC<Jhg>o=d;TAPT7]@g422
+!i122 140
+l23
+R240
+V[Gc[A9b7`oe8A2c8NILmh2
+!s100 0GPHZXJzbBoA>AST]bCFF0
+R6
+32
+R146
+!i10b 1
+R147
+R244
+R245
+!i113 1
+R11
+R12
+Etb_rx_shift_register
+Z246 w1607517787
+R28
+R1
+R2
+!i122 137
+R3
+Z247 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/TB_RX_SHIFT_REGISTER.vhd
+Z248 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/TB_RX_SHIFT_REGISTER.vhd
+l0
+L6 1
+VNHReo8fzSG=`SK4Y90W0E2
+!s100 2lHla]>@c`NdC]25G6RMl2
+R6
+32
+R146
+!i10b 1
+R147
+Z249 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/TB_RX_SHIFT_REGISTER.vhd|
+Z250 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/TB_RX_SHIFT_REGISTER.vhd|
+!i113 1
+R11
+R12
+Abehave
+R28
+R1
+R2
+DEx4 work 20 tb_rx_shift_register 0 22 NHReo8fzSG=`SK4Y90W0E2
+!i122 137
+l40
+L11 75
+VVN>9SMVeGXZ<njVF50>9:1
+!s100 F07EJG:JVzl=I`6Yg;]nf0
+R6
+32
+R146
+!i10b 1
+R147
+R249
+R250
+!i113 1
+R11
+R12
+Etb_rx_terminal_count_analyzer
+Z251 w1607517629
+R2
+R1
+R28
+!i122 139
+R3
+Z252 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_terminal_count_analyzer.vhd
+Z253 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_terminal_count_analyzer.vhd
+l0
+L6 1
+VYJiEzWT>RK<m@8TA4GKJK2
+!s100 C;z9=MAk:f=WV_jIdFcAQ0
+R6
+32
+R146
+!i10b 1
+R147
+Z254 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_terminal_count_analyzer.vhd|
+Z255 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_RX_terminal_count_analyzer.vhd|
+!i113 1
+R11
+R12
+Abeh
+R2
+R1
+R28
+DEx4 work 29 tb_rx_terminal_count_analyzer 0 22 YJiEzWT>RK<m@8TA4GKJK2
+!i122 139
+l26
+L9 37
+VcMND4i]H<2K:9O[gSo6dC3
+!s100 Q;Ma]k2VS@V3Jn8]fD8jo0
+R6
+32
+R146
+!i10b 1
+R147
+R254
+R255
+!i113 1
+R11
+R12
+Etb_rx_unit
+Z256 w1610721199
+R1
+R2
+!i122 125
+R3
+Z257 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_rx_unit.vhd
+Z258 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_rx_unit.vhd
+l0
+L5 1
+Vj<B5omeN51NGUKfn`Vd412
+!s100 a0CV[d57R4oS[XIeONUAz3
+R6
+32
+R53
+!i10b 1
+R54
+Z259 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_rx_unit.vhd|
+Z260 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_rx_unit.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+DEx4 work 10 tb_rx_unit 0 22 j<B5omeN51NGUKfn`Vd412
+!i122 125
+l31
+L9 60
+VI4H_gieG4m^LI[<H3>T[@3
+!s100 UU]UND@NC=XZ<z@HM81i60
+R6
+32
+R53
+!i10b 1
+R54
+R259
+R260
+!i113 1
+R11
+R12
+Etb_shift_register_piso_8bit
+Z261 w1612302274
+R1
+R2
+!i122 117
+R3
+Z262 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_shift_register_piso_8_bit.vhd
+Z263 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_shift_register_piso_8_bit.vhd
+l0
+L4 1
+V>=o0>AWd62heFXB9ZJk>j3
+!s100 hOTZ^K30Ome:8;mQ1R01g3
+R6
+32
+R16
+!i10b 1
+R17
+Z264 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_shift_register_piso_8_bit.vhd|
+Z265 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_shift_register_piso_8_bit.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+DEx4 work 27 tb_shift_register_piso_8bit 0 22 >=o0>AWd62heFXB9ZJk>j3
+!i122 117
+l26
+L7 59
+V01TeDTD?DVj4U[L7Pd[`n1
+!s100 TzId;=_i5KZc=]<Zb^;;50
+R6
+32
+R16
+!i10b 1
+R17
+R264
+R265
+!i113 1
+R11
+R12
+Etb_sr_ff
+Z266 w1610707963
+R1
+R2
+!i122 129
+R3
+Z267 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_SR_FF.vhd
+Z268 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_SR_FF.vhd
+l0
+L4 1
+Vg?jZ^jTGd_7MTMHWdfGbB1
+!s100 16CK>1f28:9_T<HL[TZP00
+R6
+32
+R7
+!i10b 1
+R8
+Z269 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_SR_FF.vhd|
+Z270 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_SR_FF.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R1
+R2
+DEx4 work 8 tb_sr_ff 0 22 g?jZ^jTGd_7MTMHWdfGbB1
+!i122 129
+l18
+L8 28
+V]@ObPRKUh4hiHkS[702>g1
+!s100 58LH4HG]dD=C@bH2H?C>j2
+R6
+32
+R7
+!i10b 1
+R8
+R269
+R270
+!i113 1
+R11
+R12
+Etb_terminal_count_analyzer
+Z271 w1607511880
+R28
+R1
+R2
+!i122 147
+R3
+Z272 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_terminal_count_analyzer.vhd
+Z273 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_terminal_count_analyzer.vhd
+l0
+L5 1
+VJ936YKCh[k[io?U>m`13R2
+!s100 i0MJTmBJoWbKZ=H2f:WF<3
+R6
+32
+R135
+!i10b 1
+R175
+Z274 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_terminal_count_analyzer.vhd|
+Z275 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_terminal_count_analyzer.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 26 tb_terminal_count_analyzer 0 22 J936YKCh[k[io?U>m`13R2
+!i122 147
+l25
+L8 39
+VRid6He]`<SKKb`i>:OnTb1
+!s100 <GVfzT5id`j=^_MIcFT^k3
+R6
+32
+R135
+!i10b 1
+R175
+R274
+R275
+!i113 1
+R11
+R12
+Etb_tx_dp_cu
+Z276 w1610806202
+R28
+R1
+R2
+!i122 122
+R3
+Z277 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_tx_dp_cu.vhd
+Z278 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_tx_dp_cu.vhd
+l0
+L5 1
+VFGA_9n:AAg`2RIE]nbNgj0
+!s100 bglkYnNn:2<LDK>Vm_[@41
+R6
+32
+R53
+!i10b 1
+R54
+Z279 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_tx_dp_cu.vhd|
+Z280 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_tx_dp_cu.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 11 tb_tx_dp_cu 0 22 FGA_9n:AAg`2RIE]nbNgj0
+!i122 122
+l30
+R189
+V8cSJ0P:;CoPWZz9<L2ldR1
+!s100 I^We^mbCSHZoJlKk>aHMW2
+R6
+32
+R53
+!i10b 1
+R54
+R279
+R280
+!i113 1
+R11
+R12
+Etb_uart
+Z281 w1610708745
+R1
+R2
+!i122 128
+R3
+Z282 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_UART.vhd
+Z283 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_UART.vhd
+l0
+L4 1
+VGJZ1iDlN[Qz3TAEhhJJPY1
+!s100 8@EfofJ_gZ9`Dh@V`Yd_P1
+R6
+32
+R7
+!i10b 1
+R8
+Z284 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_UART.vhd|
+Z285 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tb_UART.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R1
+R2
+DEx4 work 7 tb_uart 0 22 GJZ1iDlN[Qz3TAEhhJJPY1
+!i122 128
+l23
+Z286 L8 67
+VK<KMeG_Q7@;n4@dnoDJ7?0
+!s100 ojaY8jXVA]cf9[7l2Z3XS1
+R6
+32
+R7
+!i10b 1
+R8
+R284
+R285
+!i113 1
+R11
+R12
+Etbbusinterface
+Z287 w1612203211
+R1
+R2
+!i122 118
+R3
+Z288 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbBusInterface.vhd
+Z289 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbBusInterface.vhd
+l0
+L4 1
+VB3<ch:7aZgaLKOlI]5>jI2
+!s100 XhX8kbIhV1d^W9AASEFG=1
+R6
+32
+R16
+!i10b 1
+R17
+Z290 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbBusInterface.vhd|
+Z291 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbBusInterface.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R1
+R2
+DEx4 work 14 tbbusinterface 0 22 B3<ch:7aZgaLKOlI]5>jI2
+!i122 118
+l33
+R286
+VR]d]KRzbUhbLSMML>0[EO1
+!s100 JX>8eF6n8L=KnNI8Gb@6R1
+R6
+32
+R16
+!i10b 1
+R17
+R290
+R291
+!i113 1
+R11
+R12
+Etbchangedetector
+Z292 w1608238127
+R1
+R2
+!i122 134
+R3
+Z293 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbChangeDetector.vhd
+Z294 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbChangeDetector.vhd
+l0
+L4 1
+VTgDL<2BYn@h>iKU38cgD[3
+!s100 =G=dlGX3nTnHZfMf>XjNb1
+R6
+32
+R23
+!i10b 1
+R24
+Z295 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbChangeDetector.vhd|
+Z296 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbChangeDetector.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R1
+R2
+DEx4 work 16 tbchangedetector 0 22 TgDL<2BYn@h>iKU38cgD[3
+!i122 134
+l18
+L8 25
+Vc_Y_abCi^WNM;>5UNJJ8P0
+!s100 _6_;zS72ZWbDY]RM]dQMz0
+R6
+32
+R23
+!i10b 1
+R24
+R295
+R296
+!i113 1
+R11
+R12
+Etbdec3to8
+Z297 w1607367532
+R1
+R2
+!i122 166
+R3
+Z298 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbDec3to8.vhd
+Z299 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbDec3to8.vhd
+l0
+L4 1
+VUYf4b7NERo8>oiLfjWNVQ0
+!s100 6>YIEG_1k8?lU=6Tg0aNm0
+R6
+32
+R31
+!i10b 1
+R32
+Z300 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbDec3to8.vhd|
+Z301 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbDec3to8.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R1
+R2
+DEx4 work 9 tbdec3to8 0 22 UYf4b7NERo8>oiLfjWNVQ0
+!i122 166
+l19
+L8 18
+VDPGDCllSfPlah^m_OjJZA2
+!s100 TSCDbXN73>>KG78=EGIO]1
+R6
+32
+R31
+!i10b 1
+R32
+R300
+R301
+!i113 1
+R11
+R12
+Etbff
+Z302 w1607367306
+R1
+R2
+!i122 168
+R3
+Z303 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbFF.vhd
+Z304 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbFF.vhd
+l0
+L4 1
+V:0]ec?oA`7[R`RX1`FCEI0
+!s100 0Omg^8f?_XFL8NV[[6mA00
+R6
+32
+R60
+!i10b 1
+R32
+Z305 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbFF.vhd|
+Z306 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tbFF.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R1
+R2
+DEx4 work 4 tbff 0 22 :0]ec?oA`7[R`RX1`FCEI0
+!i122 168
+l18
+L8 27
+VhbhS6V6PFH40VkIlVEb=J2
+!s100 3<5ZVGY2mHZZlI]AY5A1i1
+R6
+32
+R60
+!i10b 1
+R32
+R305
+R306
+!i113 1
+R11
+R12
+Eterminal_count_analyzer
+Z307 w1607468189
+R28
+R1
+R2
+!i122 160
+R3
+Z308 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/terminal_count_analyzer.vhd
+Z309 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/terminal_count_analyzer.vhd
+l0
+L5 1
+V5WY4;PDG5CiQZ73hOnGj[3
+!s100 Je5ZZUff0[eT:AZ2SU_P]1
+R6
+32
+R39
+!i10b 1
+R40
+Z310 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/terminal_count_analyzer.vhd|
+Z311 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/terminal_count_analyzer.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 23 terminal_count_analyzer 0 22 5WY4;PDG5CiQZ73hOnGj[3
+!i122 160
+l16
+R150
+Vhgil=GY95[`NVXY73CAKl1
+!s100 YVR=_oiemJT;7;d5P^m]<2
+R6
+32
+R39
+!i10b 1
+R40
+R310
+R311
+!i113 1
+R11
+R12
+Etx_dp_cu
+Z312 w1610805624
+R28
+R1
+R2
+!i122 123
+R3
+Z313 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tx_dp_cu.vhd
+Z314 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tx_dp_cu.vhd
+l0
+L5 1
+Vf0>TP7nk?j[K<8KLmJ57n0
+!s100 bS:K[:Zg?XkMbF?Y3Z=mo3
+R6
+32
+R53
+!i10b 1
+R54
+Z315 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tx_dp_cu.vhd|
+Z316 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tx_dp_cu.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 8 tx_dp_cu 0 22 f0>TP7nk?j[K<8KLmJ57n0
+!i122 123
+l80
+L19 267
+VUFZ1lbb4RIh_KcQ0Kdh3F1
+!s100 25zQ:8<g8D>m_MQ9hnib30
+R6
+32
+R53
+!i10b 1
+R54
+R315
+R316
+!i113 1
+R11
+R12
+Etx_unit
+Z317 w1608127901
+R28
+R1
+R2
+!i122 135
+R3
+Z318 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tx_unit.vhd
+Z319 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tx_unit.vhd
+l0
+L5 1
+VRkdIB]dDW=ocJj[V8S8c80
+!s100 S1TQX;=nY1kO?:19M1]513
+R6
+32
+R23
+!i10b 1
+R24
+Z320 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tx_unit.vhd|
+Z321 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/tx_unit.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 7 tx_unit 0 22 RkdIB]dDW=ocJj[V8S8c80
+!i122 135
+l74
+L19 257
+V3jMY;EAMa]Wbg]BQYO[[83
+!s100 d;Jd2[[gY4hnfAT7k@HnJ1
+R6
+32
+R23
+!i10b 1
+R24
+R320
+R321
+!i113 1
+R11
+R12
+Euart
+Z322 w1611048482
+R1
+R2
+!i122 120
+R3
+Z323 8C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/UART.vhd
+Z324 FC:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/UART.vhd
+l0
+L4 1
+VL=WRznHoBbbX[S`<V;jnA2
+!s100 =CjQe^5nndX]02zE8=X<f1
+R6
+32
+R16
+!i10b 1
+R17
+Z325 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/UART.vhd|
+Z326 !s107 C:/Users/loren/Desktop/Elle/Quarto_Anno/SDI/UART/FINAL/UART.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R1
+R2
+DEx4 work 4 uart 0 22 L=WRznHoBbbX[S`<V;jnA2
+!i122 120
+l61
+L14 86
+VIJS4]DYC80TW<lBfhlK[<3
+!s100 m1PJh1:XK4j0XJ746jMH:1
+R6
+32
+R16
+!i10b 1
+R17
+R325
+R326
+!i113 1
+R11
+R12
